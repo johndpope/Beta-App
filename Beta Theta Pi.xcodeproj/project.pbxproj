@@ -10,8 +10,17 @@
 		1956E08D1FE5ED9500583363 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1956E08C1FE5ED9500583363 /* AppDelegate.swift */; };
 		1956E08F1FE5ED9500583363 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1956E08E1FE5ED9500583363 /* ViewController.swift */; };
 		1956E0921FE5ED9500583363 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1956E0901FE5ED9500583363 /* Main.storyboard */; };
-		1956E0941FE5ED9500583363 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1956E0931FE5ED9500583363 /* Assets.xcassets */; };
 		1956E0971FE5ED9500583363 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1956E0951FE5ED9500583363 /* LaunchScreen.storyboard */; };
+		197F9EF61FE5F9F600F8F2CD /* Gotham Bold Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 197F9EF51FE5F9F600F8F2CD /* Gotham Bold Regular.ttf */; };
+		197F9EFF1FE6352800F8F2CD /* btp_digital_media_circle in Resources */ = {isa = PBXBuildFile; fileRef = 197F9EF71FE6352700F8F2CD /* btp_digital_media_circle */; };
+		197F9F001FE6352800F8F2CD /* btp_horizontal_identity_digital in Resources */ = {isa = PBXBuildFile; fileRef = 197F9EF81FE6352700F8F2CD /* btp_horizontal_identity_digital */; };
+		197F9F011FE6352800F8F2CD /* btp_wordmark_digital in Resources */ = {isa = PBXBuildFile; fileRef = 197F9EF91FE6352800F8F2CD /* btp_wordmark_digital */; };
+		197F9F021FE6352800F8F2CD /* btp_stacked_identity_digital in Resources */ = {isa = PBXBuildFile; fileRef = 197F9EFA1FE6352800F8F2CD /* btp_stacked_identity_digital */; };
+		197F9F031FE6352800F8F2CD /* btp_shield_digital in Resources */ = {isa = PBXBuildFile; fileRef = 197F9EFB1FE6352800F8F2CD /* btp_shield_digital */; };
+		197F9F041FE6352800F8F2CD /* btp_dragon_digital in Resources */ = {isa = PBXBuildFile; fileRef = 197F9EFC1FE6352800F8F2CD /* btp_dragon_digital */; };
+		197F9F051FE6352800F8F2CD /* btp_coat_of_arms_digital in Resources */ = {isa = PBXBuildFile; fileRef = 197F9EFD1FE6352800F8F2CD /* btp_coat_of_arms_digital */; };
+		197F9F061FE6352800F8F2CD /* btp_crest_digital in Resources */ = {isa = PBXBuildFile; fileRef = 197F9EFE1FE6352800F8F2CD /* btp_crest_digital */; };
+		197F9F081FE6DDDC00F8F2CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 197F9F071FE6DDDC00F8F2CD /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,9 +28,19 @@
 		1956E08C1FE5ED9500583363 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1956E08E1FE5ED9500583363 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1956E0911FE5ED9500583363 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		1956E0931FE5ED9500583363 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1956E0961FE5ED9500583363 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1956E0981FE5ED9500583363 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1956E09E1FE5EDD500583363 /* Beta Theta Pi.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Beta Theta Pi.entitlements"; sourceTree = "<group>"; };
+		197F9EF51FE5F9F600F8F2CD /* Gotham Bold Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gotham Bold Regular.ttf"; sourceTree = "<group>"; };
+		197F9EF71FE6352700F8F2CD /* btp_digital_media_circle */ = {isa = PBXFileReference; lastKnownFileType = folder; path = btp_digital_media_circle; sourceTree = "<group>"; };
+		197F9EF81FE6352700F8F2CD /* btp_horizontal_identity_digital */ = {isa = PBXFileReference; lastKnownFileType = folder; path = btp_horizontal_identity_digital; sourceTree = "<group>"; };
+		197F9EF91FE6352800F8F2CD /* btp_wordmark_digital */ = {isa = PBXFileReference; lastKnownFileType = folder; path = btp_wordmark_digital; sourceTree = "<group>"; };
+		197F9EFA1FE6352800F8F2CD /* btp_stacked_identity_digital */ = {isa = PBXFileReference; lastKnownFileType = folder; path = btp_stacked_identity_digital; sourceTree = "<group>"; };
+		197F9EFB1FE6352800F8F2CD /* btp_shield_digital */ = {isa = PBXFileReference; lastKnownFileType = folder; path = btp_shield_digital; sourceTree = "<group>"; };
+		197F9EFC1FE6352800F8F2CD /* btp_dragon_digital */ = {isa = PBXFileReference; lastKnownFileType = folder; path = btp_dragon_digital; sourceTree = "<group>"; };
+		197F9EFD1FE6352800F8F2CD /* btp_coat_of_arms_digital */ = {isa = PBXFileReference; lastKnownFileType = folder; path = btp_coat_of_arms_digital; sourceTree = "<group>"; };
+		197F9EFE1FE6352800F8F2CD /* btp_crest_digital */ = {isa = PBXFileReference; lastKnownFileType = folder; path = btp_crest_digital; sourceTree = "<group>"; };
+		197F9F071FE6DDDC00F8F2CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +57,7 @@
 		1956E0801FE5ED9500583363 = {
 			isa = PBXGroup;
 			children = (
+				197F9EF41FE5F9C800F8F2CD /* Resources */,
 				1956E08B1FE5ED9500583363 /* Beta Theta Pi */,
 				1956E08A1FE5ED9500583363 /* Products */,
 			);
@@ -54,14 +74,31 @@
 		1956E08B1FE5ED9500583363 /* Beta Theta Pi */ = {
 			isa = PBXGroup;
 			children = (
+				1956E09E1FE5EDD500583363 /* Beta Theta Pi.entitlements */,
 				1956E08C1FE5ED9500583363 /* AppDelegate.swift */,
 				1956E08E1FE5ED9500583363 /* ViewController.swift */,
 				1956E0901FE5ED9500583363 /* Main.storyboard */,
-				1956E0931FE5ED9500583363 /* Assets.xcassets */,
+				197F9F071FE6DDDC00F8F2CD /* Assets.xcassets */,
 				1956E0951FE5ED9500583363 /* LaunchScreen.storyboard */,
 				1956E0981FE5ED9500583363 /* Info.plist */,
 			);
 			path = "Beta Theta Pi";
+			sourceTree = "<group>";
+		};
+		197F9EF41FE5F9C800F8F2CD /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				197F9EFD1FE6352800F8F2CD /* btp_coat_of_arms_digital */,
+				197F9EFE1FE6352800F8F2CD /* btp_crest_digital */,
+				197F9EF71FE6352700F8F2CD /* btp_digital_media_circle */,
+				197F9EFC1FE6352800F8F2CD /* btp_dragon_digital */,
+				197F9EF81FE6352700F8F2CD /* btp_horizontal_identity_digital */,
+				197F9EFB1FE6352800F8F2CD /* btp_shield_digital */,
+				197F9EFA1FE6352800F8F2CD /* btp_stacked_identity_digital */,
+				197F9EF91FE6352800F8F2CD /* btp_wordmark_digital */,
+				197F9EF51FE5F9F600F8F2CD /* Gotham Bold Regular.ttf */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -97,6 +134,11 @@
 					1956E0881FE5ED9500583363 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.DataProtection = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -124,8 +166,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				1956E0971FE5ED9500583363 /* LaunchScreen.storyboard in Resources */,
-				1956E0941FE5ED9500583363 /* Assets.xcassets in Resources */,
+				197F9F011FE6352800F8F2CD /* btp_wordmark_digital in Resources */,
+				197F9F041FE6352800F8F2CD /* btp_dragon_digital in Resources */,
+				197F9F061FE6352800F8F2CD /* btp_crest_digital in Resources */,
+				197F9F031FE6352800F8F2CD /* btp_shield_digital in Resources */,
+				197F9EF61FE5F9F600F8F2CD /* Gotham Bold Regular.ttf in Resources */,
 				1956E0921FE5ED9500583363 /* Main.storyboard in Resources */,
+				197F9F051FE6352800F8F2CD /* btp_coat_of_arms_digital in Resources */,
+				197F9F001FE6352800F8F2CD /* btp_horizontal_identity_digital in Resources */,
+				197F9F021FE6352800F8F2CD /* btp_stacked_identity_digital in Resources */,
+				197F9F081FE6DDDC00F8F2CD /* Assets.xcassets in Resources */,
+				197F9EFF1FE6352800F8F2CD /* btp_digital_media_circle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,6 +325,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Beta Theta Pi/Beta Theta Pi.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3AT7FQ5S2Z;
 				INFOPLIST_FILE = "Beta Theta Pi/Info.plist";
@@ -289,6 +341,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Beta Theta Pi/Beta Theta Pi.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3AT7FQ5S2Z;
 				INFOPLIST_FILE = "Beta Theta Pi/Info.plist";
