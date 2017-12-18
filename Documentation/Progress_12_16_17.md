@@ -4,7 +4,7 @@ Today I spent a lot of time looking at iOS/Swift courses from [Udacity](https://
 
 ## Photos of App Screen Ideas
 
-x
+[embed]https://github.com/jamesjweber/Beta-App/blob/master/Documentation/betaThetaPiAppIdeas.pdf[/embed]
 
 ## Links to sources used
 
