@@ -4,7 +4,10 @@ Today I spent a lot of time looking at iOS/Swift courses from [Udacity](https://
 
 ## Photos of App Screen Ideas
 
-![Image of App Screen Ideas]https://github.com/jamesjweber/Beta-App/blob/master/Documentation/betaThetaPiAppIdeas.pdf
+![App View Ideas 1](https://github.com/jamesjweber/Beta-App/blob/master/Documentation/App%20View%20Ideas/Scanned%20Documents%201.jpg)
+
+
+![App View Ideas 2](https://github.com/jamesjweber/Beta-App/blob/master/Documentation/App%20View%20Ideas/Scanned%20Documents%202.jpg)
 
 ## Links to sources used
 
