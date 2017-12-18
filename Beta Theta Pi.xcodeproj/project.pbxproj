@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		194249E71FE74BC20091A0C8 /* btp_digital_media_square copy in Resources */ = {isa = PBXBuildFile; fileRef = 194249E61FE74BC10091A0C8 /* btp_digital_media_square copy */; };
 		1956E08D1FE5ED9500583363 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1956E08C1FE5ED9500583363 /* AppDelegate.swift */; };
 		1956E08F1FE5ED9500583363 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1956E08E1FE5ED9500583363 /* ViewController.swift */; };
 		1956E0921FE5ED9500583363 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1956E0901FE5ED9500583363 /* Main.storyboard */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		194249E61FE74BC10091A0C8 /* btp_digital_media_square copy */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "btp_digital_media_square copy"; sourceTree = "<group>"; };
 		1956E0891FE5ED9500583363 /* Beta Theta Pi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Beta Theta Pi.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1956E08C1FE5ED9500583363 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1956E08E1FE5ED9500583363 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 		197F9EF41FE5F9C800F8F2CD /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				194249E61FE74BC10091A0C8 /* btp_digital_media_square copy */,
 				197F9EFD1FE6352800F8F2CD /* btp_coat_of_arms_digital */,
 				197F9EFE1FE6352800F8F2CD /* btp_crest_digital */,
 				197F9EF71FE6352700F8F2CD /* btp_digital_media_circle */,
@@ -165,6 +168,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				194249E71FE74BC20091A0C8 /* btp_digital_media_square copy in Resources */,
 				1956E0971FE5ED9500583363 /* LaunchScreen.storyboard in Resources */,
 				197F9F011FE6352800F8F2CD /* btp_wordmark_digital in Resources */,
 				197F9F041FE6352800F8F2CD /* btp_dragon_digital in Resources */,

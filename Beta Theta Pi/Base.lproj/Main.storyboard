@@ -58,6 +58,9 @@
                                                                 <nil key="textColor"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
+                                                                <connections>
+                                                                    <action selector="displayUserName:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="HWS-7b-276"/>
+                                                                </connections>
                                                             </textField>
                                                         </subviews>
                                                         <constraints>
@@ -79,6 +82,9 @@
                                                                 <nil key="textColor"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
+                                                                <connections>
+                                                                    <action selector="displayUserName:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="rZO-xH-2cC"/>
+                                                                </connections>
                                                             </textField>
                                                         </subviews>
                                                         <constraints>
@@ -101,15 +107,15 @@
                                         </constraints>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gj8-NS-VCQ">
-                                        <rect key="frame" x="0.0" y="617" width="375" height="30"/>
+                                        <rect key="frame" x="0.0" y="576" width="375" height="71"/>
                                         <fontDescription key="fontDescription" name="GothamBold" family="Gotham Bold" pointSize="20"/>
-                                        <state key="normal" title="Create Account">
+                                        <state key="normal" title="Create an Account">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                     </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="Gj8-NS-VCQ" secondAttribute="bottom" id="Jbc-7Y-TKp"/>
+                                    <constraint firstAttribute="bottom" secondItem="Gj8-NS-VCQ" secondAttribute="baseline" constant="30" id="Jbc-7Y-TKp"/>
                                 </constraints>
                             </stackView>
                         </subviews>
@@ -124,6 +130,8 @@
                     </view>
                     <connections>
                         <outlet property="betaImage" destination="oaj-nw-Gwm" id="seg-JC-sk3"/>
+                        <outlet property="passwordField" destination="R6E-mS-1lZ" id="AA3-xu-zeT"/>
+                        <outlet property="usernameField" destination="Xaq-VI-FaV" id="WQh-JN-CIM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

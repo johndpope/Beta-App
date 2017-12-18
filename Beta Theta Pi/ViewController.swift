@@ -9,20 +9,39 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet weak var betaImage: UIImageView!
+    @IBOutlet weak var passwordField: UITextField!
+    @IBOutlet weak var usernameField: UITextField!
     
-    
+    var username: String = String()
+    var password: String = String()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        usernameField.delegate = self
+        passwordField.delegate = self
+        passwordField.isSecureTextEntry = true
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
+    @IBAction func displayUserName(_ sender: Any){
+        username = usernameField.text!
+        password = passwordField.text!
+    }
+    
 }
 
+
+// MARK: - UITextFieldDelegate
+extension ViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        usernameField.resignFirstResponder()
+        passwordField.resignFirstResponder()
+        return false
+    }
+}
