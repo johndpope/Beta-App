@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1900B5781FE89E4700144D36 /* App_Icons in Resources */ = {isa = PBXBuildFile; fileRef = 1900B5771FE89E4700144D36 /* App_Icons */; };
 		194249E71FE74BC20091A0C8 /* btp_digital_media_square copy in Resources */ = {isa = PBXBuildFile; fileRef = 194249E61FE74BC10091A0C8 /* btp_digital_media_square copy */; };
+		194C681C1FE8C772004657CC /* f_logo_online in Resources */ = {isa = PBXBuildFile; fileRef = 194C681B1FE8C772004657CC /* f_logo_online */; };
 		1956E08D1FE5ED9500583363 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1956E08C1FE5ED9500583363 /* AppDelegate.swift */; };
 		1956E08F1FE5ED9500583363 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1956E08E1FE5ED9500583363 /* ViewController.swift */; };
 		1956E0921FE5ED9500583363 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1956E0901FE5ED9500583363 /* Main.storyboard */; };
@@ -23,12 +24,14 @@
 		197F9F051FE6352800F8F2CD /* btp_coat_of_arms_digital in Resources */ = {isa = PBXBuildFile; fileRef = 197F9EFD1FE6352800F8F2CD /* btp_coat_of_arms_digital */; };
 		197F9F061FE6352800F8F2CD /* btp_crest_digital in Resources */ = {isa = PBXBuildFile; fileRef = 197F9EFE1FE6352800F8F2CD /* btp_crest_digital */; };
 		197F9F081FE6DDDC00F8F2CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 197F9F071FE6DDDC00F8F2CD /* Assets.xcassets */; };
+		19B84D4E1FE8DA0100C53C46 /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 19B84D4D1FE8DA0100C53C46 /* awsconfiguration.json */; };
 		919E7061942B322824390341 /* Pods_Beta_Theta_Pi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E7E25882A0CF58F72D0A7A8 /* Pods_Beta_Theta_Pi.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1900B5771FE89E4700144D36 /* App_Icons */ = {isa = PBXFileReference; lastKnownFileType = folder; path = App_Icons; sourceTree = "<group>"; };
 		194249E61FE74BC10091A0C8 /* btp_digital_media_square copy */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "btp_digital_media_square copy"; sourceTree = "<group>"; };
+		194C681B1FE8C772004657CC /* f_logo_online */ = {isa = PBXFileReference; lastKnownFileType = folder; name = f_logo_online; path = ../../../../Downloads/f_logo_online; sourceTree = "<group>"; };
 		1956E0891FE5ED9500583363 /* Beta Theta Pi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Beta Theta Pi.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1956E08C1FE5ED9500583363 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1956E08E1FE5ED9500583363 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -46,6 +49,7 @@
 		197F9EFD1FE6352800F8F2CD /* btp_coat_of_arms_digital */ = {isa = PBXFileReference; lastKnownFileType = folder; path = btp_coat_of_arms_digital; sourceTree = "<group>"; };
 		197F9EFE1FE6352800F8F2CD /* btp_crest_digital */ = {isa = PBXFileReference; lastKnownFileType = folder; path = btp_crest_digital; sourceTree = "<group>"; };
 		197F9F071FE6DDDC00F8F2CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		19B84D4D1FE8DA0100C53C46 /* awsconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = awsconfiguration.json; sourceTree = "<group>"; };
 		9E7E25882A0CF58F72D0A7A8 /* Pods_Beta_Theta_Pi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Beta_Theta_Pi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF2BF39C388DB76261373852 /* Pods-Beta Theta Pi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Beta Theta Pi.release.xcconfig"; path = "Pods/Target Support Files/Pods-Beta Theta Pi/Pods-Beta Theta Pi.release.xcconfig"; sourceTree = "<group>"; };
 		CC78CE7A047B54CE689A74BA /* Pods-Beta Theta Pi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Beta Theta Pi.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Beta Theta Pi/Pods-Beta Theta Pi.debug.xcconfig"; sourceTree = "<group>"; };
@@ -93,6 +97,7 @@
 		1956E08B1FE5ED9500583363 /* Beta Theta Pi */ = {
 			isa = PBXGroup;
 			children = (
+				19B84D4D1FE8DA0100C53C46 /* awsconfiguration.json */,
 				1956E09E1FE5EDD500583363 /* Beta Theta Pi.entitlements */,
 				1956E08C1FE5ED9500583363 /* AppDelegate.swift */,
 				1956E08E1FE5ED9500583363 /* ViewController.swift */,
@@ -107,6 +112,7 @@
 		197F9EF41FE5F9C800F8F2CD /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				194C681B1FE8C772004657CC /* f_logo_online */,
 				1900B5771FE89E4700144D36 /* App_Icons */,
 				194249E61FE74BC10091A0C8 /* btp_digital_media_square copy */,
 				197F9EFD1FE6352800F8F2CD /* btp_coat_of_arms_digital */,
@@ -198,6 +204,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19B84D4E1FE8DA0100C53C46 /* awsconfiguration.json in Resources */,
 				194249E71FE74BC20091A0C8 /* btp_digital_media_square copy in Resources */,
 				1956E0971FE5ED9500583363 /* LaunchScreen.storyboard in Resources */,
 				197F9F011FE6352800F8F2CD /* btp_wordmark_digital in Resources */,
@@ -207,6 +214,7 @@
 				197F9F031FE6352800F8F2CD /* btp_shield_digital in Resources */,
 				197F9EF61FE5F9F600F8F2CD /* Gotham Bold Regular.ttf in Resources */,
 				1956E0921FE5ED9500583363 /* Main.storyboard in Resources */,
+				194C681C1FE8C772004657CC /* f_logo_online in Resources */,
 				197F9F051FE6352800F8F2CD /* btp_coat_of_arms_digital in Resources */,
 				197F9F001FE6352800F8F2CD /* btp_horizontal_identity_digital in Resources */,
 				197F9F021FE6352800F8F2CD /* btp_stacked_identity_digital in Resources */,
