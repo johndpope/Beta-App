@@ -131,6 +131,7 @@
                             <constraint firstItem="Vuv-Cj-i8Q" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="QUp-zL-UCB"/>
                             <constraint firstItem="q9h-Rb-wgv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="SgS-0d-vkG"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="q9h-Rb-wgv" secondAttribute="trailing" id="T22-QA-ihr"/>
+                            <constraint firstItem="q9h-Rb-wgv" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="121" id="X0b-XN-Th2"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
