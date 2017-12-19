@@ -10,3 +10,6 @@ Next I had to configure credentials, so I installed the suggested `Amazon Cognit
 ### Facebook 
 
 I installed the `Facebook SDK` using CocoaPods. The Facebook button was successfully implemented using their sourcecode. However, it wass in the middle of the screen, and since it was hardcoded in (not using GUI), I implemented a custom button using sourcecode I found [here](https://stackoverflow.com/questions/36380389/customized-facebook-login-button-after-integration)!
+
+## Photo of Home Screen with Facebook Login
+![](https://github.com/jamesjweber/Beta-App/blob/master/Documentation/App%20View%20Ideas/iPhoneX_HomeScreen_w_FB_Login.png)
