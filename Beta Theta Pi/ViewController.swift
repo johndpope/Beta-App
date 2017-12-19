@@ -8,6 +8,8 @@
 
 import UIKit
 
+import FacebookLogin
+
 class ViewController: UIViewController {
     
     @IBOutlet weak var betaImage: UIImageView!
@@ -22,6 +24,9 @@ class ViewController: UIViewController {
         usernameField.delegate = self
         passwordField.delegate = self
         passwordField.isSecureTextEntry = true
+        let loginButton = LoginButton(readPermissions: [ .publicProfile ])
+        loginButton.center = view.center
+        view.addSubview(loginButton)
     }
     
     override func didReceiveMemoryWarning() {
@@ -33,7 +38,7 @@ class ViewController: UIViewController {
         username = usernameField.text!
         password = passwordField.text!
     }
-    
+
 }
 
 
