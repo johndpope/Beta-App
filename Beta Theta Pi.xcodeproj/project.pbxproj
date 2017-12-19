@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1900B5781FE89E4700144D36 /* App_Icons in Resources */ = {isa = PBXBuildFile; fileRef = 1900B5771FE89E4700144D36 /* App_Icons */; };
 		194249E71FE74BC20091A0C8 /* btp_digital_media_square copy in Resources */ = {isa = PBXBuildFile; fileRef = 194249E61FE74BC10091A0C8 /* btp_digital_media_square copy */; };
 		1956E08D1FE5ED9500583363 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1956E08C1FE5ED9500583363 /* AppDelegate.swift */; };
 		1956E08F1FE5ED9500583363 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1956E08E1FE5ED9500583363 /* ViewController.swift */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1900B5771FE89E4700144D36 /* App_Icons */ = {isa = PBXFileReference; lastKnownFileType = folder; path = App_Icons; sourceTree = "<group>"; };
 		194249E61FE74BC10091A0C8 /* btp_digital_media_square copy */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "btp_digital_media_square copy"; sourceTree = "<group>"; };
 		1956E0891FE5ED9500583363 /* Beta Theta Pi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Beta Theta Pi.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1956E08C1FE5ED9500583363 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 		197F9EF41FE5F9C800F8F2CD /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				1900B5771FE89E4700144D36 /* App_Icons */,
 				194249E61FE74BC10091A0C8 /* btp_digital_media_square copy */,
 				197F9EFD1FE6352800F8F2CD /* btp_coat_of_arms_digital */,
 				197F9EFE1FE6352800F8F2CD /* btp_crest_digital */,
@@ -171,6 +174,7 @@
 				194249E71FE74BC20091A0C8 /* btp_digital_media_square copy in Resources */,
 				1956E0971FE5ED9500583363 /* LaunchScreen.storyboard in Resources */,
 				197F9F011FE6352800F8F2CD /* btp_wordmark_digital in Resources */,
+				1900B5781FE89E4700144D36 /* App_Icons in Resources */,
 				197F9F041FE6352800F8F2CD /* btp_dragon_digital in Resources */,
 				197F9F061FE6352800F8F2CD /* btp_crest_digital in Resources */,
 				197F9F031FE6352800F8F2CD /* btp_shield_digital in Resources */,

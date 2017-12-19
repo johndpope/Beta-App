@@ -24,6 +24,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iPadProBackground" translatesAutoresizingMaskIntoConstraints="NO" id="q9h-Rb-wgv">
+                                <rect key="frame" x="0.0" y="-122" width="375" height="910"/>
+                            </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="Vuv-Cj-i8Q">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <subviews>
@@ -121,10 +124,13 @@
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.5" blue="0.95969350508281159" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="q9h-Rb-wgv" secondAttribute="top" constant="142" id="2VS-BZ-aum"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Vuv-Cj-i8Q" secondAttribute="bottom" id="CKe-oc-LjK"/>
                             <constraint firstItem="Vuv-Cj-i8Q" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="EUg-ou-di1"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Vuv-Cj-i8Q" secondAttribute="trailing" id="Q3m-oP-eiI"/>
                             <constraint firstItem="Vuv-Cj-i8Q" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="QUp-zL-UCB"/>
+                            <constraint firstItem="q9h-Rb-wgv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="SgS-0d-vkG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="q9h-Rb-wgv" secondAttribute="trailing" id="T22-QA-ihr"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -141,5 +147,6 @@
     </scenes>
     <resources>
         <image name="betaThetaPiCrestandText" width="300" height="200"/>
+        <image name="iPadProBackground" width="682" height="910"/>
     </resources>
 </document>
