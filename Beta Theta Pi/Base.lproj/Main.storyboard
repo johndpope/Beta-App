@@ -153,7 +153,6 @@
                     </view>
                     <connections>
                         <outlet property="betaImage" destination="oaj-nw-Gwm" id="seg-JC-sk3"/>
-                        <outlet property="myLoginButton" destination="w0u-A5-OZA" id="vbx-zd-5Ol"/>
                         <outlet property="passwordField" destination="R6E-mS-1lZ" id="AA3-xu-zeT"/>
                         <outlet property="usernameField" destination="Xaq-VI-FaV" id="WQh-JN-CIM"/>
                     </connections>
