@@ -8,9 +8,22 @@
 
 import UIKit
 
-class CreateAccount_ViewController: UIViewController {
+class CreateAccount_ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var userImage: UIImageView!
+    
+    let list = ["Freshman", "Sophomore", "Junior", "Senior", "Super Senior"]
+    
+    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "cell1")
+        cell.textLabel?.text = list[indexPath.row]
+        
+        return cell
+    }
+    
+    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return(list.count)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
