@@ -10,6 +10,12 @@ import UIKit
 import FacebookLogin
 import FBSDKCoreKit
 import FBSDKLoginKit
+import AWSAuthCore
+import AWSAuthUI
+import AWSMobileClient
+import AWSUserPoolsSignIn
+import AWSFacebookSignIn
+import AWSGoogleSignIn
 
 class ViewController: UIViewController {
     
@@ -41,8 +47,9 @@ class ViewController: UIViewController {
             FBSDKGraphRequest(graphPath: "me", parameters: ["fields": "id, name, first_name, last_name, picture.type(large), email"]).start(completionHandler: { (connection, result, error) -> Void in
                 if (error == nil){
                     //everything works print the user data
+                    print("--------- USER DATA --------")
                     print(result)
-                    print("YAYAY")
+                    print("----------------------------")
                 }
             })
         }
@@ -55,6 +62,9 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        if !AWSSignInManager.sharedInstance().isLoggedIn {
+            presentAuthUIViewController()
+        }
         usernameField.delegate = self
         passwordField.delegate = self
         passwordField.isSecureTextEntry = true
@@ -68,6 +78,27 @@ class ViewController: UIViewController {
     @IBAction func displayUserName(_ sender: Any){
         username = usernameField.text!
         password = passwordField.text!
+    }
+    
+    func presentAuthUIViewController() {
+        let config = AWSAuthUIConfiguration()
+        config.enableUserPoolsUI = true
+        config.addSignInButtonView(class: AWSFacebookSignInButton.self)
+        config.addSignInButtonView(class: AWSGoogleSignInButton.self)
+        config.backgroundColor = UIColor.blue
+        config.font = UIFont (name: "Helvetica Neue", size: 20)
+        config.isBackgroundColorFullScreen = true
+        config.canCancel = true
+        
+        /*AWSAuthUIViewController.presentViewController(
+            with: self.navigationController!,
+            configuration: config, completionHandler: { (provider: AWSSignInProvider, error: Error?) in
+                if error == nil {
+                    // SignIn succeeded.
+                } else {
+                    // end user faced error while loggin in, take any required action here.
+                }
+        }) */
     }
 
 }
