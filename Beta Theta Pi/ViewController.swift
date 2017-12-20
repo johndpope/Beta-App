@@ -75,6 +75,10 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override open var shouldAutorotate: Bool {
+        return false
+    }
+    
     @IBAction func displayUserName(_ sender: Any){
         username = usernameField.text!
         password = passwordField.text!
@@ -100,6 +104,7 @@ class ViewController: UIViewController {
                 }
         }) */
     }
+    
 
 }
 
