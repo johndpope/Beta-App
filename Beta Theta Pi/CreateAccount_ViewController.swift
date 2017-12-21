@@ -74,6 +74,7 @@ class CreateAccount_ViewController: UIViewController, UITextFieldDelegate, UIIma
         dismiss(animated: true, completion: nil)
     }
     
+    /* * * * * * * * * * * From TOCropViewController Example * * * * * * * * * * */
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         
         // The info dictionary may contain multiple representations of the image. You want to use the original.
@@ -167,6 +168,7 @@ class CreateAccount_ViewController: UIViewController, UITextFieldDelegate, UIIma
             self.imageView.center = CGPoint(x: self.view.bounds.midX, y: self.view.bounds.midY)
         }
     }
+    /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
     
     @IBAction func gestureRecognition(_ sender: UITapGestureRecognizer) {
         // Hide the keyboard.
