@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import KeychainSwift
+import CoreData
 
 class CreateAccount_ViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, CropViewControllerDelegate, UIGestureRecognizerDelegate {
     
@@ -58,6 +60,7 @@ class CreateAccount_ViewController: UIViewController, UITextFieldDelegate, UIIma
         state.delegate = self
         zip.delegate = self
         appEmail.delegate = self
+        appUsername.delegate = self
         appPassword.delegate = self
         appConfirmPassword.delegate = self
         
@@ -74,13 +77,78 @@ class CreateAccount_ViewController: UIViewController, UITextFieldDelegate, UIIma
         dismiss(animated: true, completion: nil)
     }
     
+    func getCoreData_String(_ attribute: String) -> String {
+        var stringArr:[String] = []
+        
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "UserInfo")
+        request.returnsObjectsAsFaults = false
+        do {
+            let result = try context.fetch(request)
+            for data in result as! [NSManagedObject] {
+                if let stringValue = data.value(forKey: attribute) as? String
+                {
+                    stringArr.append(stringValue)
+                }
+            }
+        } catch {
+            print("Failed")
+        }
+        let count = stringArr.count
+        if(count > 0){
+            return stringArr[count - 1]
+        }
+        else{
+            return ""
+        }
+    }
+    
+    func getCoreData_Bool(_ attribute: String) -> Bool {
+        return false
+    }
+    
+    /* func getCoreDataImage(_ attribute: String) -> UIImage {
+        var urlStringArr:[String] = []
+        
+        /*let url = URL(string: profilePicUrl)
+        print(url!)
+        let data = try? Data(contentsOf: url!) //make sure your image in this url does exist, otherwise unwrap in a if let check / try-catch
+        */
+        
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "UserInfo")
+        request.returnsObjectsAsFaults = false
+        
+        do {
+            let result = try context.fetch(request)
+            for data in result as! [NSManagedObject] {
+                if let urltext = data.value(forKey: "profilePic") as? String{
+                    urlStringArr.append(urltext)
+                }
+            }
+        } catch {
+            print("Failed")
+        }
+        let count = urlStringArr.count
+        let url = URL(string: urlStringArr[count - 1])
+        print(url!)
+        let data = try? Data(contentsOf: url!) //make sure your image in this url does exist, otherwise unwrap in a if let check / try-catch
+        return UIImage(data: data!)!
+    } */
+    
     /* * * * * * * * * * * From TOCropViewController Example * * * * * * * * * * */
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         
         // The info dictionary may contain multiple representations of the image. You want to use the original.
+        
+        //userImage.image = getCoreDataImage("profilePic")
+        
         guard let image = info[UIImagePickerControllerOriginalImage] as? UIImage else {
             fatalError("Expected a dictionary containing an image, but was provided the following: \(info)")
         }
+        
         
         let cropController = CropViewController(croppingStyle: croppingStyle, image: image)
         cropController.delegate = self

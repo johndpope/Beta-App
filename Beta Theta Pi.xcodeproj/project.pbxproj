@@ -28,6 +28,9 @@
 		19B504D81FE8F3DD0086599B /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 19B504D71FE8F3DD0086599B /* awsconfiguration.json */; };
 		19F670631FEB61FF005D44DD /* CropViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19F670621FEB61FF005D44DD /* CropViewController.swift */; };
 		19F670AC1FEB7B68005D44DD /* coreDataTest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 19F670AA1FEB7B68005D44DD /* coreDataTest.xcdatamodeld */; };
+		19F670B21FEB9E7D005D44DD /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F670B11FEB9E7D005D44DD /* LocalAuthentication.framework */; };
+		19F670B91FEBA34F005D44DD /* touchIDIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 19F670B81FEBA34F005D44DD /* touchIDIcon.png */; };
+		19F670BB1FEBAAA7005D44DD /* Announcements_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19F670BA1FEBAAA7005D44DD /* Announcements_ViewController.swift */; };
 		19FD02B31FEA464D00F0C5C0 /* CreateAccount_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FD02B21FEA464D00F0C5C0 /* CreateAccount_ViewController.swift */; };
 		19FD02B61FEA48D500F0C5C0 /* defaultPhoto.png in Resources */ = {isa = PBXBuildFile; fileRef = 19FD02B51FEA48D400F0C5C0 /* defaultPhoto.png */; };
 		919E7061942B322824390341 /* Pods_Beta_Theta_Pi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E7E25882A0CF58F72D0A7A8 /* Pods_Beta_Theta_Pi.framework */; };
@@ -58,6 +61,9 @@
 		19B504D71FE8F3DD0086599B /* awsconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = awsconfiguration.json; path = ../../../../Downloads/awsconfiguration.json; sourceTree = "<group>"; };
 		19F670621FEB61FF005D44DD /* CropViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CropViewController.swift; sourceTree = "<group>"; };
 		19F670AB1FEB7B68005D44DD /* coreDataTest.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = coreDataTest.xcdatamodel; sourceTree = "<group>"; };
+		19F670B11FEB9E7D005D44DD /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
+		19F670B81FEBA34F005D44DD /* touchIDIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = touchIDIcon.png; path = ../../../../../Downloads/touchIDIcon.png; sourceTree = "<group>"; };
+		19F670BA1FEBAAA7005D44DD /* Announcements_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Announcements_ViewController.swift; sourceTree = "<group>"; };
 		19FD02B21FEA464D00F0C5C0 /* CreateAccount_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccount_ViewController.swift; sourceTree = "<group>"; };
 		19FD02B51FEA48D400F0C5C0 /* defaultPhoto.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = defaultPhoto.png; sourceTree = "<group>"; };
 		9E7E25882A0CF58F72D0A7A8 /* Pods_Beta_Theta_Pi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Beta_Theta_Pi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -70,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19F670B21FEB9E7D005D44DD /* LocalAuthentication.framework in Frameworks */,
 				919E7061942B322824390341 /* Pods_Beta_Theta_Pi.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -80,6 +87,7 @@
 		0A742E0D435DB4053A268E3A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				19F670B11FEB9E7D005D44DD /* LocalAuthentication.framework */,
 				9E7E25882A0CF58F72D0A7A8 /* Pods_Beta_Theta_Pi.framework */,
 			);
 			name = Frameworks;
@@ -119,6 +127,7 @@
 				1956E0951FE5ED9500583363 /* LaunchScreen.storyboard */,
 				1956E0981FE5ED9500583363 /* Info.plist */,
 				19F670621FEB61FF005D44DD /* CropViewController.swift */,
+				19F670BA1FEBAAA7005D44DD /* Announcements_ViewController.swift */,
 			);
 			path = "Beta Theta Pi";
 			sourceTree = "<group>";
@@ -126,6 +135,7 @@
 		197F9EF41FE5F9C800F8F2CD /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				19F670B31FEBA1AF005D44DD /* touchIDIcon */,
 				19FD02B41FEA48BD00F0C5C0 /* Avatar Photos */,
 				194C681B1FE8C772004657CC /* f_logo_online */,
 				1900B5771FE89E4700144D36 /* App_Icons */,
@@ -141,6 +151,14 @@
 				197F9EF51FE5F9F600F8F2CD /* Gotham Bold Regular.ttf */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		19F670B31FEBA1AF005D44DD /* touchIDIcon */ = {
+			isa = PBXGroup;
+			children = (
+				19F670B81FEBA34F005D44DD /* touchIDIcon.png */,
+			);
+			path = touchIDIcon;
 			sourceTree = "<group>";
 		};
 		19FD02B41FEA48BD00F0C5C0 /* Avatar Photos */ = {
@@ -233,6 +251,7 @@
 				1956E0971FE5ED9500583363 /* LaunchScreen.storyboard in Resources */,
 				197F9F011FE6352800F8F2CD /* btp_wordmark_digital in Resources */,
 				1900B5781FE89E4700144D36 /* App_Icons in Resources */,
+				19F670B91FEBA34F005D44DD /* touchIDIcon.png in Resources */,
 				197F9F041FE6352800F8F2CD /* btp_dragon_digital in Resources */,
 				197F9F061FE6352800F8F2CD /* btp_crest_digital in Resources */,
 				197F9F031FE6352800F8F2CD /* btp_shield_digital in Resources */,
@@ -276,6 +295,7 @@
 				"${BUILT_PRODUCTS_DIR}/FacebookLogin/FacebookLogin.framework",
 				"${BUILT_PRODUCTS_DIR}/FacebookShare/FacebookShare.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/KeychainSwift/KeychainSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/TOCropViewController/TOCropViewController.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -299,6 +319,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookLogin.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookShare.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TOCropViewController.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -350,6 +371,7 @@
 				1956E08F1FE5ED9500583363 /* ViewController.swift in Sources */,
 				19F670631FEB61FF005D44DD /* CropViewController.swift in Sources */,
 				199228031FEB25A600B59129 /* CustomView.swift in Sources */,
+				19F670BB1FEBAAA7005D44DD /* Announcements_ViewController.swift in Sources */,
 				19FD02B31FEA464D00F0C5C0 /* CreateAccount_ViewController.swift in Sources */,
 				1956E08D1FE5ED9500583363 /* AppDelegate.swift in Sources */,
 			);
