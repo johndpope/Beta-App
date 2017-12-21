@@ -24,7 +24,9 @@
 		197F9F051FE6352800F8F2CD /* btp_coat_of_arms_digital in Resources */ = {isa = PBXBuildFile; fileRef = 197F9EFD1FE6352800F8F2CD /* btp_coat_of_arms_digital */; };
 		197F9F061FE6352800F8F2CD /* btp_crest_digital in Resources */ = {isa = PBXBuildFile; fileRef = 197F9EFE1FE6352800F8F2CD /* btp_crest_digital */; };
 		197F9F081FE6DDDC00F8F2CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 197F9F071FE6DDDC00F8F2CD /* Assets.xcassets */; };
+		199228031FEB25A600B59129 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199228021FEB25A600B59129 /* CustomView.swift */; };
 		19B504D81FE8F3DD0086599B /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 19B504D71FE8F3DD0086599B /* awsconfiguration.json */; };
+		19F670631FEB61FF005D44DD /* CropViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19F670621FEB61FF005D44DD /* CropViewController.swift */; };
 		19FD02B31FEA464D00F0C5C0 /* CreateAccount_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FD02B21FEA464D00F0C5C0 /* CreateAccount_ViewController.swift */; };
 		19FD02B61FEA48D500F0C5C0 /* defaultPhoto.png in Resources */ = {isa = PBXBuildFile; fileRef = 19FD02B51FEA48D400F0C5C0 /* defaultPhoto.png */; };
 		919E7061942B322824390341 /* Pods_Beta_Theta_Pi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E7E25882A0CF58F72D0A7A8 /* Pods_Beta_Theta_Pi.framework */; };
@@ -51,7 +53,9 @@
 		197F9EFD1FE6352800F8F2CD /* btp_coat_of_arms_digital */ = {isa = PBXFileReference; lastKnownFileType = folder; path = btp_coat_of_arms_digital; sourceTree = "<group>"; };
 		197F9EFE1FE6352800F8F2CD /* btp_crest_digital */ = {isa = PBXFileReference; lastKnownFileType = folder; path = btp_crest_digital; sourceTree = "<group>"; };
 		197F9F071FE6DDDC00F8F2CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		199228021FEB25A600B59129 /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 		19B504D71FE8F3DD0086599B /* awsconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = awsconfiguration.json; path = ../../../../Downloads/awsconfiguration.json; sourceTree = "<group>"; };
+		19F670621FEB61FF005D44DD /* CropViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CropViewController.swift; sourceTree = "<group>"; };
 		19FD02B21FEA464D00F0C5C0 /* CreateAccount_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccount_ViewController.swift; sourceTree = "<group>"; };
 		19FD02B51FEA48D400F0C5C0 /* defaultPhoto.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = defaultPhoto.png; sourceTree = "<group>"; };
 		9E7E25882A0CF58F72D0A7A8 /* Pods_Beta_Theta_Pi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Beta_Theta_Pi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -106,10 +110,12 @@
 				1956E08C1FE5ED9500583363 /* AppDelegate.swift */,
 				1956E08E1FE5ED9500583363 /* ViewController.swift */,
 				1956E0901FE5ED9500583363 /* Main.storyboard */,
+				199228021FEB25A600B59129 /* CustomView.swift */,
 				19FD02B21FEA464D00F0C5C0 /* CreateAccount_ViewController.swift */,
 				197F9F071FE6DDDC00F8F2CD /* Assets.xcassets */,
 				1956E0951FE5ED9500583363 /* LaunchScreen.storyboard */,
 				1956E0981FE5ED9500583363 /* Info.plist */,
+				19F670621FEB61FF005D44DD /* CropViewController.swift */,
 			);
 			path = "Beta Theta Pi";
 			sourceTree = "<group>";
@@ -250,79 +256,47 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-Beta Theta Pi/Pods-Beta Theta Pi-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AWSAuthCore/AWSAuthCore.framework",
 				"${BUILT_PRODUCTS_DIR}/AWSAuthUI/AWSAuthUI.framework",
-				"${BUILT_PRODUCTS_DIR}/AWSAutoScaling/AWSAutoScaling.framework",
-				"${BUILT_PRODUCTS_DIR}/AWSCloudWatch/AWSCloudWatch.framework",
 				"${BUILT_PRODUCTS_DIR}/AWSCognito/AWSCognito.framework",
 				"${BUILT_PRODUCTS_DIR}/AWSCognitoIdentityProvider/AWSCognitoIdentityProvider.framework",
 				"${BUILT_PRODUCTS_DIR}/AWSCognitoIdentityProviderASF/AWSCognitoIdentityProviderASF.framework",
 				"${BUILT_PRODUCTS_DIR}/AWSCore/AWSCore.framework",
-				"${BUILT_PRODUCTS_DIR}/AWSDynamoDB/AWSDynamoDB.framework",
-				"${BUILT_PRODUCTS_DIR}/AWSEC2/AWSEC2.framework",
-				"${BUILT_PRODUCTS_DIR}/AWSElasticLoadBalancing/AWSElasticLoadBalancing.framework",
 				"${BUILT_PRODUCTS_DIR}/AWSFacebookSignIn/AWSFacebookSignIn.framework",
 				"${BUILT_PRODUCTS_DIR}/AWSGoogleSignIn/AWSGoogleSignIn.framework",
-				"${BUILT_PRODUCTS_DIR}/AWSIoT/AWSIoT.framework",
-				"${BUILT_PRODUCTS_DIR}/AWSKinesis/AWSKinesis.framework",
-				"${BUILT_PRODUCTS_DIR}/AWSLambda/AWSLambda.framework",
-				"${BUILT_PRODUCTS_DIR}/AWSLex/AWSLex.framework",
-				"${BUILT_PRODUCTS_DIR}/AWSMachineLearning/AWSMachineLearning.framework",
-				"${BUILT_PRODUCTS_DIR}/AWSMobileAnalytics/AWSMobileAnalytics.framework",
 				"${BUILT_PRODUCTS_DIR}/AWSMobileClient/AWSMobileClient.framework",
-				"${BUILT_PRODUCTS_DIR}/AWSPinpoint/AWSPinpoint.framework",
-				"${BUILT_PRODUCTS_DIR}/AWSPolly/AWSPolly.framework",
-				"${BUILT_PRODUCTS_DIR}/AWSRekognition/AWSRekognition.framework",
-				"${BUILT_PRODUCTS_DIR}/AWSS3/AWSS3.framework",
-				"${BUILT_PRODUCTS_DIR}/AWSSES/AWSSES.framework",
-				"${BUILT_PRODUCTS_DIR}/AWSSNS/AWSSNS.framework",
-				"${BUILT_PRODUCTS_DIR}/AWSSQS/AWSSQS.framework",
-				"${BUILT_PRODUCTS_DIR}/AWSSimpleDB/AWSSimpleDB.framework",
 				"${BUILT_PRODUCTS_DIR}/AWSUserPoolsSignIn/AWSUserPoolsSignIn.framework",
 				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/CropViewController/CropViewController.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKShareKit/FBSDKShareKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FacebookCore/FacebookCore.framework",
 				"${BUILT_PRODUCTS_DIR}/FacebookLogin/FacebookLogin.framework",
 				"${BUILT_PRODUCTS_DIR}/FacebookShare/FacebookShare.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/TOCropViewController/TOCropViewController.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSAuthCore.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSAuthUI.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSAutoScaling.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSCloudWatch.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSCognito.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSCognitoIdentityProvider.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSCognitoIdentityProviderASF.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSCore.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSDynamoDB.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSEC2.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSElasticLoadBalancing.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSFacebookSignIn.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSGoogleSignIn.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSIoT.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSKinesis.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSLambda.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSLex.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSMachineLearning.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSMobileAnalytics.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSMobileClient.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSPinpoint.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSPolly.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSRekognition.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSS3.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSSES.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSSNS.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSSQS.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSSimpleDB.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSUserPoolsSignIn.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CropViewController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKShareKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookCore.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookLogin.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookShare.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TOCropViewController.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -370,6 +344,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				1956E08F1FE5ED9500583363 /* ViewController.swift in Sources */,
+				19F670631FEB61FF005D44DD /* CropViewController.swift in Sources */,
+				199228031FEB25A600B59129 /* CustomView.swift in Sources */,
 				19FD02B31FEA464D00F0C5C0 /* CreateAccount_ViewController.swift in Sources */,
 				1956E08D1FE5ED9500583363 /* AppDelegate.swift in Sources */,
 			);

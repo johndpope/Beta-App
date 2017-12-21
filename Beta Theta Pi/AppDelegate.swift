@@ -10,6 +10,7 @@ import UIKit
 import AWSMobileClient
 import AWSCognito
 import AWSCore
+import IQKeyboardManagerSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -46,6 +47,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             return nil
             
         }
+        
+        IQKeyboardManager.sharedManager().enable = true 
         
         return AWSMobileClient.sharedInstance().interceptApplication(
             application, didFinishLaunchingWithOptions:
