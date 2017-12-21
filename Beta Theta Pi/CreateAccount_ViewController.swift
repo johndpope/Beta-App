@@ -27,6 +27,10 @@ class CreateAccount_ViewController: UIViewController, UITextFieldDelegate, UIIma
     @IBOutlet weak var appConfirmPassword: UITextField!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet var tapGesture: UITapGestureRecognizer!
+    @IBOutlet weak var backButton: UIButton!
+    @IBOutlet weak var passwordError: UILabel!
+    
+    let keychain = KeychainSwift()
     
     private let imageView = UIImageView()
     private var image: UIImage?
@@ -45,9 +49,6 @@ class CreateAccount_ViewController: UIViewController, UITextFieldDelegate, UIIma
         userImage.layer.cornerRadius = userImage.frame.height/2
         userImage.clipsToBounds = true
         
-        //tapGesture.cancelsTouchesInView = false
-        scrollView.addGestureRecognizer(tapGesture)
-        
         userImage.isUserInteractionEnabled = true
         userImage.contentMode = .scaleAspectFit
         
@@ -64,6 +65,14 @@ class CreateAccount_ViewController: UIViewController, UITextFieldDelegate, UIIma
         appPassword.delegate = self
         appConfirmPassword.delegate = self
         
+        print(!getCoreData_Bool("defaultImageSet"))
+        print(getCoreData_Bool("linkedToFB"))
+        print(getCoreDataImage("profilePic"))
+        if(!getCoreData_Bool("defaultImageSet") && getCoreData_Bool("linkedToFB")){
+            userImage.image = getCoreDataImage("profilePic")
+        }
+        
+        getAllValues()
     }
 
     override func didReceiveMemoryWarning() {
@@ -71,10 +80,52 @@ class CreateAccount_ViewController: UIViewController, UITextFieldDelegate, UIIma
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func goBack(_ sender: Any) {
+        setAllValues()
+        performSegue(withIdentifier: "backToMainSegue", sender: self)
+    }
+    
     // MARK: Actions
+    func setAllValues() {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+        let newUser = NSEntityDescription.insertNewObject(forEntityName: "UserInfo", into: context)
+        newUser.setValue(appEmail.text, forKey: "appEmail")
+        newUser.setValue(appUsername.text, forKey: "appUsername")
+        newUser.setValue(city.text, forKey: "city")
+        newUser.setValue(betaEmail.text, forKey: "email")
+        newUser.setValue(firstName.text, forKey: "firstName")
+        newUser.setValue(lastName.text, forKey: "lastName")
+        newUser.setValue(Int(phone.text!), forKey: "phone")
+        newUser.setValue(state.text, forKey: "state")
+        newUser.setValue(streetAddress.text, forKey: "streetAddress")
+        newUser.setValue(Int(zip.text!), forKey: "zip")
+        do {
+            try context.save()
+        } catch {
+            print("Failed saving")
+        }
+    }
+    
+    func getAllValues() {
+        appEmail.text = getCoreData_String("appEmail")
+        appUsername.text = getCoreData_String("appUsername")
+        city.text = getCoreData_String("city")
+        betaEmail.text = getCoreData_String("email")
+        firstName.text = getCoreData_String("firstName")
+        lastName.text = getCoreData_String("lastName")
+        phone.text = getCoreData_Int("phone") == 0 ? String() : String(getCoreData_Int("phone"))
+        state.text = getCoreData_String("state")
+        streetAddress.text = getCoreData_String("streetAddress")
+        zip.text = getCoreData_Int("zip") == 0 ? String() : String(getCoreData_Int("zip"))
+    }
+    
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         // Dismiss the picker if the user canceled.
         dismiss(animated: true, completion: nil)
+    }
+    
+    func setUserInformation(_ attribute: String, attributeString: String) {
     }
     
     func getCoreData_String(_ attribute: String) -> String {
@@ -105,17 +156,63 @@ class CreateAccount_ViewController: UIViewController, UITextFieldDelegate, UIIma
     }
     
     func getCoreData_Bool(_ attribute: String) -> Bool {
-        return false
+        var boolArr:[Bool] = []
+        
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "UserInfo")
+        request.returnsObjectsAsFaults = false
+        do {
+            let result = try context.fetch(request)
+            for data in result as! [NSManagedObject] {
+                if let boolValue = data.value(forKey: attribute) as? Bool
+                {
+                    boolArr.append(boolValue)
+                }
+            }
+        } catch {
+            print("Failed")
+        }
+        let count = boolArr.count
+        if(count > 0){
+            return boolArr[count - 1]
+        }
+        else{
+            return false
+        }
     }
     
-    /* func getCoreDataImage(_ attribute: String) -> UIImage {
+    func getCoreData_Int(_ attribute: String) -> Int32 {
+        var intArr:[Int32] = []
+        
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "UserInfo")
+        request.returnsObjectsAsFaults = false
+        do {
+            let result = try context.fetch(request)
+            for data in result as! [NSManagedObject] {
+                if let intValue = data.value(forKey: attribute) as? Int32
+                {
+                    intArr.append(intValue)
+                }
+            }
+        } catch {
+            print("Failed")
+        }
+        let count = intArr.count
+        if(count > 0){
+            return intArr[count - 1]
+        }
+        else{
+            return 0
+        }
+        
+    }
+    
+    func getCoreDataImage(_ attribute: String) -> UIImage {
         var urlStringArr:[String] = []
-        
-        /*let url = URL(string: profilePicUrl)
-        print(url!)
-        let data = try? Data(contentsOf: url!) //make sure your image in this url does exist, otherwise unwrap in a if let check / try-catch
-        */
-        
+
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: "UserInfo")
@@ -136,14 +233,12 @@ class CreateAccount_ViewController: UIViewController, UITextFieldDelegate, UIIma
         print(url!)
         let data = try? Data(contentsOf: url!) //make sure your image in this url does exist, otherwise unwrap in a if let check / try-catch
         return UIImage(data: data!)!
-    } */
+    }
     
     /* * * * * * * * * * * From TOCropViewController Example * * * * * * * * * * */
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         
         // The info dictionary may contain multiple representations of the image. You want to use the original.
-        
-        //userImage.image = getCoreDataImage("profilePic")
         
         guard let image = info[UIImagePickerControllerOriginalImage] as? UIImage else {
             fatalError("Expected a dictionary containing an image, but was provided the following: \(info)")
@@ -253,8 +348,6 @@ class CreateAccount_ViewController: UIViewController, UITextFieldDelegate, UIIma
         present(imagePickerController, animated: true, completion: nil)
     }
     
-
-    
     func resignAllKeyboads() {
         // Hide the keyboard.
         firstName.resignFirstResponder()
@@ -273,6 +366,109 @@ class CreateAccount_ViewController: UIViewController, UITextFieldDelegate, UIIma
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         resignAllKeyboads()
         return false
+    }
+    
+    @IBAction func createAccount(_ sender: Any) {
+        var firstNameBool = false
+        var lastNameBool = false
+        var betaEmailBool = false
+        var phoneBool = false
+        var streetAddressBool = false
+        var cityBool = false
+        var stateBool = false
+        var zipBool = false
+        var appEmailBool = false
+        var usernameBool = false
+        var passwordBool = false
+        var confirmPasswordBool = false
+        
+        if(firstName.text == ""){
+            firstName.backgroundColor = UIColor.red
+        } else {
+            firstName.backgroundColor = UIColor.white
+            firstNameBool = true
+        }
+        if(lastName.text == ""){
+            lastName.backgroundColor = UIColor.red
+        } else {
+            lastName.backgroundColor = UIColor.white
+            lastNameBool = true
+        }
+        if(betaEmail.text == ""){
+            betaEmail.backgroundColor = UIColor.red
+        } else {
+            betaEmail.backgroundColor = UIColor.white
+            betaEmailBool = true
+        }
+        if(phone.text == ""){
+            phone.backgroundColor = UIColor.red
+        } else {
+            phone.backgroundColor = UIColor.white
+            phoneBool = true
+        }
+        if(streetAddress.text == ""){
+            streetAddress.backgroundColor = UIColor.red
+        } else {
+            streetAddress.backgroundColor = UIColor.white
+            streetAddressBool = true
+        }
+        if(city.text == ""){
+            city.backgroundColor = UIColor.red
+        } else {
+            city.backgroundColor = UIColor.white
+            cityBool = true
+        }
+        if(state.text == ""){
+            state.backgroundColor = UIColor.red
+        } else {
+            state.backgroundColor = UIColor.white
+            stateBool = true
+        }
+        if(zip.text == ""){
+            zip.backgroundColor = UIColor.red
+        } else {
+            zip.backgroundColor = UIColor.white
+            zipBool = true
+        }
+        if(appEmail.text == ""){
+            appEmail.backgroundColor = UIColor.red
+        } else {
+            appEmail.backgroundColor = UIColor.white
+            appEmailBool = true
+        }
+        if(appUsername.text == ""){
+            appUsername.backgroundColor = UIColor.red
+        } else {
+            appUsername.backgroundColor = UIColor.white
+            usernameBool = true
+        }
+        if(appPassword.text == ""){
+            appPassword.backgroundColor = UIColor.red
+        } else {
+            appPassword.backgroundColor = UIColor.white
+            passwordBool = true
+        }
+        if(appConfirmPassword.text == ""){
+            appConfirmPassword.backgroundColor = UIColor.red
+        } else {
+            appConfirmPassword.backgroundColor = UIColor.white
+            confirmPasswordBool = true
+        }
+        
+        var passwordsMatch = false
+        
+        if(appPassword.text != appConfirmPassword.text){
+            passwordError.text = "Passwords do not match!"
+        } else {
+            passwordError.text = "Passwords match!"
+            passwordsMatch = true
+        }
+        
+        if(firstNameBool && lastNameBool && betaEmailBool && phoneBool && streetAddressBool && cityBool && stateBool && zipBool && appEmailBool && usernameBool && passwordBool && confirmPasswordBool && passwordsMatch){
+            setAllValues()
+            keychain.set(appPassword.text!, forKey: "password")
+            performSegue(withIdentifier: "createAccountToSplitViewSegue", sender: self)
+        }
     }
     
 }

@@ -35,13 +35,13 @@ class ViewController: UIViewController, UITextFieldDelegate {
             presentAuthUIViewController()
         }
         
+        setUserInformation("")
+        
         usernameField.delegate = self
         passwordField.delegate = self
         passwordField.isSecureTextEntry = true
         
         usernameField.text = getUsername()
-        printUserInformation()
-        
     }
     
     override func didReceiveMemoryWarning() {
@@ -79,21 +79,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
-    func deleteAllUserInformation() {
-        let delegate = UIApplication.shared.delegate as! AppDelegate
-        let context = delegate.persistentContainer.viewContext
-        
-        let deleteFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "UserInfo")
-        let deleteRequest = NSBatchDeleteRequest(fetchRequest: deleteFetch)
-        
-        do {
-            try context.execute(deleteRequest)
-            try context.save()
-        } catch {
-            print ("There was an error")
-        }
-    }
-    
     func getUsername() -> String {
         var usernameArr:[String] = []
     
@@ -115,33 +100,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
         let count = usernameArr.count
         if(count > 0){
             return usernameArr[usernameArr.count - 1]
-        }
-        else{
-            return ""
-        }
-    }
-    
-    func getPassword() -> String {
-        var passwordArr:[String] = []
-        
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        let context = appDelegate.persistentContainer.viewContext
-        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "UserInfo")
-        request.returnsObjectsAsFaults = false
-        do {
-            let result = try context.fetch(request)
-            for data in result as! [NSManagedObject] {
-                if let password = data.value(forKey: "password") as? String
-                {
-                    passwordArr.append(password)
-                }
-            }
-        } catch {
-            print("Failed")
-        }
-        let count = passwordArr.count
-        if(count > 0){
-            return passwordArr[passwordArr.count - 1]
         }
         else{
             return ""
@@ -175,14 +133,12 @@ class ViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
-    func setUserInformation(_ username: String, password: String) {
-        deleteAllUserInformation() // clear previous information
-        
+    func setUserInformation(_ username: String) {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
         let newUser = NSEntityDescription.insertNewObject(forEntityName: "UserInfo", into: context)
         newUser.setValue(username, forKey: "appUsername")
-        newUser.setValue(password, forKey: "appPassword")
+        newUser.setValue(true, forKey: "defaultImageSet")
         do {
             try context.save()
         } catch {
@@ -198,6 +154,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         if((FBSDKAccessToken.current()) != nil){
             FBSDKGraphRequest(graphPath: "me", parameters: ["fields": "id, name, first_name, last_name, picture.type(large), email"]).start(completionHandler: { (connection, result, error) -> Void in
                 if (error == nil){
+                    newUser.setValue(true, forKey: "linkedToFB")
                     //everything works print the user data
                     print("--------- USER DATA --------")
                     let fbDetails = result as! NSDictionary
@@ -241,8 +198,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
             for data in result as! [NSManagedObject] {
                 print("Username: ")
                 print(data.value(forKey: "appUsername") as! String)
-                print("Password: ")
-                print(data.value(forKey: "appPassword") as! String)
             }
         } catch {
             print("Failed")
@@ -262,9 +217,13 @@ class ViewController: UIViewController, UITextFieldDelegate {
                 }
                 if((fbloginresult.grantedPermissions) != nil)
                 {
-                    var canSegue: Bool = false
                     if(self.getLinkedToFB()){
                         print("gucci")
+                        self.setUserInformationFromFB()
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                            // your code here For Pushing to Another Screen
+                            self.performSegue(withIdentifier: "createAccountSegue", sender: self)
+                        }
                     }
                     else {
                         print("not gucci")
@@ -274,7 +233,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
                         // add the actions (buttons)
                         let alertAction = UIAlertAction( title : "Continue", style: UIAlertActionStyle.default) { action in
                             self.setUserInformationFromFB()
-                            self.performSegue(withIdentifier: "createAccountSegue", sender: self)
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5){
+                                // your code here For Pushing to Another Screen
+                                self.performSegue(withIdentifier: "createAccountSegue", sender: self)
+                            }
                         }
                         alert.addAction(alertAction)
                         alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel, handler: nil))
@@ -295,7 +257,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBAction func displayUserName(_ sender: Any){
         username = usernameField.text!
         password = passwordField.text!
-        setUserInformation(username, password: password)
+        setUserInformation(username)
     }
     
     @IBAction func touchIDSignIn(_ sender: Any) {
@@ -343,7 +305,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
                 if success {
                     
                     //TODO: User authenticated successfully, take appropriate action
-                    self.performSegue(withIdentifier: "announcementSegue", sender: self)
+                    self.performSegue(withIdentifier: "loginToSplitViewSegue", sender: self)
                     
                 } else {
                     //TODO: User did not authenticate successfully, look at error and take appropriate action
