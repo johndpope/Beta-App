@@ -35,7 +35,11 @@ class ViewController: UIViewController, UITextFieldDelegate {
             presentAuthUIViewController()
         }
         
-        setUserInformation("")
+        if(getUsername() != ""){
+            setUserInformation(getUsername())
+        } else {
+            setUserInformation("")
+        }
         
         usernameField.delegate = self
         passwordField.delegate = self
@@ -220,7 +224,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
                     if(self.getLinkedToFB()){
                         print("gucci")
                         self.setUserInformationFromFB()
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                             // your code here For Pushing to Another Screen
                             self.performSegue(withIdentifier: "createAccountSegue", sender: self)
                         }

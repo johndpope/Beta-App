@@ -65,14 +65,13 @@ class CreateAccount_ViewController: UIViewController, UITextFieldDelegate, UIIma
         appPassword.delegate = self
         appConfirmPassword.delegate = self
         
-        print(!getCoreData_Bool("defaultImageSet"))
-        print(getCoreData_Bool("linkedToFB"))
-        print(getCoreDataImage("profilePic"))
-        if(!getCoreData_Bool("defaultImageSet") && getCoreData_Bool("linkedToFB")){
-            userImage.image = getCoreDataImage("profilePic")
-        }
         
         getAllValues()
+        
+        if(getCoreData_Bool("defaultImageSet") && getCoreData_Bool("linkedToFB")){
+            print("Profile Pic Set")
+            userImage.image = getCoreDataImage("profilePic")
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -100,6 +99,7 @@ class CreateAccount_ViewController: UIViewController, UITextFieldDelegate, UIIma
         newUser.setValue(state.text, forKey: "state")
         newUser.setValue(streetAddress.text, forKey: "streetAddress")
         newUser.setValue(Int(zip.text!), forKey: "zip")
+        
         do {
             try context.save()
         } catch {
