@@ -61,7 +61,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         if usernameField.text != "" && passwordField.text != "" {
             if let passwordKey = keychain.get("password") {
                 if (passwordField.text == passwordKey) && (usernameField.text == getUsername()) {
-                    print("username and password correct!")
+                    self.performSegue(withIdentifier: "loginToSplitViewSegue", sender: self)
                 }
                 else if (passwordField.text == passwordKey) || (usernameField.text != getUsername()) {
                     errorMessage.text = "Incorrect username or password"

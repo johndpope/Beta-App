@@ -48,7 +48,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
         }
         
-        IQKeyboardManager.sharedManager().enable = true 
+        IQKeyboardManager.sharedManager().enable = true
         
         return AWSMobileClient.sharedInstance().interceptApplication(
             application, didFinishLaunchingWithOptions:
