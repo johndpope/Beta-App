@@ -19,9 +19,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iPadProBackground" translatesAutoresizingMaskIntoConstraints="NO" id="5z1-Gg-hYT">
-                                <rect key="frame" x="0.0" y="-122" width="375" height="910"/>
-                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="whiteDragonIcon" translatesAutoresizingMaskIntoConstraints="NO" id="wIf-Zk-FCZ">
                                 <rect key="frame" x="0.0" y="20" width="375" height="424.5"/>
                             </imageView>
@@ -30,12 +27,8 @@
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="wIf-Zk-FCZ" secondAttribute="top" id="5cw-eb-5Jb"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="wIf-Zk-FCZ" secondAttribute="bottom" multiplier="3/2" id="Geu-IL-Fln"/>
-                            <constraint firstItem="5z1-Gg-hYT" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="121" id="Mjk-uq-1An"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="5z1-Gg-hYT" secondAttribute="top" constant="142" id="VVn-QG-XKl"/>
-                            <constraint firstItem="5z1-Gg-hYT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="bWp-Bt-W00"/>
                             <constraint firstItem="wIf-Zk-FCZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ene-2K-QvM"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wIf-Zk-FCZ" secondAttribute="trailing" id="npG-Fo-iCJ"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5z1-Gg-hYT" secondAttribute="trailing" id="ymX-He-0sB"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -46,7 +39,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="iPadProBackground" width="682" height="910"/>
         <image name="whiteDragonIcon" width="264" height="204"/>
     </resources>
 </document>
