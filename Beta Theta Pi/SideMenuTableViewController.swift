@@ -118,7 +118,13 @@ class SideMenuTableViewController: UITableViewController {
     */
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        NSLog("You selected cell number: \(indexPath.row)!")
+        if(indexPath.row == 0){
+            //self.dismiss(animated: true, completion: nil)
+            self.performSegue(withIdentifier: "announcementSegue", sender: self)
+        }
+        if(indexPath.row == 6){
+            self.performSegue(withIdentifier: "studyHoursSegue", sender: self)
+        }
         // self.performSegue(withIdentifier: "yourIdentifier", sender: self)
     }
     

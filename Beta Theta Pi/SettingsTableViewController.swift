@@ -25,14 +25,10 @@ class SettingsTableViewController: UITableViewController {
                                                "Allow for Notifications"]),
             SettingsSections(sectionName: "Notifications",
                              sectionSettings: ["Dishes",
-                                               "Sober duty",
+                                               "Sober Duty",
                                                "Functions",
-                                               "Philanthropy events",
-                                               "Community service events"]),
-            SettingsSections(sectionName: "Section 3",
-                             sectionSettings: ["Setting 1", "Setting 2"]),
-            SettingsSections(sectionName: "Section 4",
-                             sectionSettings: ["Setting 1", "Setting 2"])
+                                               "Philanthropy Events",
+                                               "Community Service"])
         ]
     }
     

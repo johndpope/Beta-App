@@ -11,6 +11,7 @@ import AWSMobileClient
 import AWSCognito
 import AWSCore
 import IQKeyboardManagerSwift
+import SideMenu
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -47,6 +48,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             return nil
             
         }
+        
+        let customSideMenuManager = SideMenuManager()
         
         IQKeyboardManager.sharedManager().enable = true
         

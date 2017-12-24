@@ -1,14 +1,16 @@
 //
-//  Announcments_Main_ViewController.swift
+//  StudyHoursViewController.swift
 //  Beta Theta Pi
 //
-//  Created by James Weber on 12/22/17.
+//  Created by James Weber on 12/23/17.
 //  Copyright © 2017 James Weber. All rights reserved.
+//
 
 import UIKit
+import SideMenu
 
-class Announcments_Main_ViewController: UIViewController {
-    
+class StudyHoursViewController: UIViewController {
+
     @IBOutlet weak var sideMenu: UIBarButtonItem!
     @IBOutlet weak var settings: UIBarButtonItem!
     
@@ -22,7 +24,7 @@ class Announcments_Main_ViewController: UIViewController {
             
             settings.target = self.revealViewController()
             settings.action = #selector(SWRevealViewController.rightRevealToggle(_:))
-           self.revealViewController().rightViewRevealWidth = self.view.frame.width * 0.7
+            self.revealViewController().rightViewRevealWidth = self.view.frame.width * 0.7
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
         
@@ -34,7 +36,7 @@ class Announcments_Main_ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+
     /*
     // MARK: - Navigation
 
@@ -45,37 +47,4 @@ class Announcments_Main_ViewController: UIViewController {
     }
     */
 
-}
-
-extension UIColor {
-    convenience init(red: Int, green: Int, blue: Int) {
-        assert(red >= 0 && red <= 255, "Invalid red component")
-        assert(green >= 0 && green <= 255, "Invalid green component")
-        assert(blue >= 0 && blue <= 255, "Invalid blue component")
-        
-        self.init(red: CGFloat(red) / 255.0, green: CGFloat(green) / 255.0, blue: CGFloat(blue) / 255.0, alpha: 1.0)
-    }
-    
-    convenience init(rgb: Int) {
-        self.init(
-            red: (rgb >> 16) & 0xFF,
-            green: (rgb >> 8) & 0xFF,
-            blue: rgb & 0xFF
-        )
-    }
-}
-
-extension UIView
-{
-    func viewController() -> UIViewController? {
-        var responder : UIResponder? = self
-        while let r = responder {
-            if r.isKind(of: UIView.self) {
-                responder = r.next
-            } else {
-                break
-            }
-        }
-        return responder as? UIViewController
-    }
 }
