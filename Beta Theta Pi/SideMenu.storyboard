@@ -23,7 +23,6 @@
         <!--Title-->
         <scene sceneID="WxB-4J-yyk">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xQq-9a-ELx" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController title="Title" extendedLayoutIncludesOpaqueBars="YES" hidesBottomBarWhenPushed="YES" id="9dN-OR-4lh" customClass="SideMenuTableViewController" customModule="Beta_Theta_Pi" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="50" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="vaS-0w-yo4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -108,15 +107,24 @@
                     <navigationItem key="navigationItem" title="Root View Controller" id="tF7-iQ-jrn"/>
                     <connections>
                         <outlet property="userImage" destination="XBc-Yj-M4i" id="kck-p5-cWg"/>
+                        <segue destination="guy-DP-mse" kind="show" identifier="toStudyHours" animates="NO" action="showDetailViewController:sender:" id="CmM-Mu-y9g"/>
                     </connections>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xQq-9a-ELx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1724" y="2185"/>
+            <point key="canvasLocation" x="1724" y="2266"/>
+        </scene>
+        <!--Study Hours-->
+        <scene sceneID="wVA-Gw-xnF">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Study Hours" id="guy-DP-mse" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9JV-gg-dYY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2372" y="2265"/>
         </scene>
         <!--Side Menu Navigation Controller-->
         <scene sceneID="V3F-Za-xje">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="iZI-Vl-r1L" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController hidesBottomBarWhenPushed="YES" navigationBarHidden="YES" id="DIR-76-cvl" customClass="UISideMenuNavigationController" customModule="SideMenu" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Fsa-Hr-26T">
                         <autoresizingMask key="autoresizingMask"/>
@@ -131,6 +139,7 @@
                         <segue destination="9dN-OR-4lh" kind="relationship" relationship="rootViewController" id="ICW-bW-kFX"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iZI-Vl-r1L" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1724" y="1524"/>
         </scene>

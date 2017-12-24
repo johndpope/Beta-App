@@ -24,7 +24,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var betaImage: UIImageView!
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var usernameField: UITextField!
-    @IBOutlet weak var errorMessage: UITextView!
+    @IBOutlet weak var errorMessage: UILabel!
     
     let keychain = KeychainSwift()
     
@@ -75,7 +75,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
             }
             else
             {
-                errorMessage.text = "No account created for username/password input. Please create one by clicking the button below or the FB button above"
+                errorMessage.text = "No account created for yet!"
             }
         }
         else {
@@ -308,8 +308,12 @@ class ViewController: UIViewController, UITextFieldDelegate {
                 
                 if success {
                     
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.01){
+                        // your code here For Pushing to Another Screen
+                        self.performSegue(withIdentifier: "loginToSplitViewSegue", sender: self)
+                    }
                     //TODO: User authenticated successfully, take appropriate action
-                    self.performSegue(withIdentifier: "loginToSplitViewSegue", sender: self)
+                    
                     
                 } else {
                     //TODO: User did not authenticate successfully, look at error and take appropriate action

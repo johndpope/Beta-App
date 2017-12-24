@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		1900B5781FE89E4700144D36 /* App_Icons in Resources */ = {isa = PBXBuildFile; fileRef = 1900B5771FE89E4700144D36 /* App_Icons */; };
+		1930F6481FEE71B90045A55D /* touchID.png in Resources */ = {isa = PBXBuildFile; fileRef = 1930F6471FEE71B80045A55D /* touchID.png */; };
+		1930F64C1FEE7DAA0045A55D /* Announcements.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1930F64B1FEE7DAA0045A55D /* Announcements.storyboard */; };
+		1930F64E1FEE7E150045A55D /* Study Hours.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1930F64D1FEE7E150045A55D /* Study Hours.storyboard */; };
+		1930F6501FEE7EBD0045A55D /* StudyHoursViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1930F64F1FEE7EBD0045A55D /* StudyHoursViewController.swift */; };
+		1930F6581FEED4A60045A55D /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1930F6561FEED4A50045A55D /* SWRevealViewController.m */; };
 		194249E71FE74BC20091A0C8 /* btp_digital_media_square copy in Resources */ = {isa = PBXBuildFile; fileRef = 194249E61FE74BC10091A0C8 /* btp_digital_media_square copy */; };
 		194C681C1FE8C772004657CC /* f_logo_online in Resources */ = {isa = PBXBuildFile; fileRef = 194C681B1FE8C772004657CC /* f_logo_online */; };
 		1956E08D1FE5ED9500583363 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1956E08C1FE5ED9500583363 /* AppDelegate.swift */; };
@@ -44,6 +49,13 @@
 
 /* Begin PBXFileReference section */
 		1900B5771FE89E4700144D36 /* App_Icons */ = {isa = PBXFileReference; lastKnownFileType = folder; path = App_Icons; sourceTree = "<group>"; };
+		1930F6471FEE71B80045A55D /* touchID.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = touchID.png; path = ../../../../../Downloads/touchID.png; sourceTree = "<group>"; };
+		1930F64B1FEE7DAA0045A55D /* Announcements.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Announcements.storyboard; sourceTree = "<group>"; };
+		1930F64D1FEE7E150045A55D /* Study Hours.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Study Hours.storyboard"; sourceTree = "<group>"; };
+		1930F64F1FEE7EBD0045A55D /* StudyHoursViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyHoursViewController.swift; sourceTree = "<group>"; };
+		1930F6551FEED4A30045A55D /* Beta Theta Pi-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Beta Theta Pi-Bridging-Header.h"; sourceTree = "<group>"; };
+		1930F6561FEED4A50045A55D /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		1930F6571FEED4A60045A55D /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		194249E61FE74BC10091A0C8 /* btp_digital_media_square copy */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "btp_digital_media_square copy"; sourceTree = "<group>"; };
 		194C681B1FE8C772004657CC /* f_logo_online */ = {isa = PBXFileReference; lastKnownFileType = folder; name = f_logo_online; path = ../../../../Downloads/f_logo_online; sourceTree = "<group>"; };
 		1956E0891FE5ED9500583363 /* Beta Theta Pi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Beta Theta Pi.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -105,9 +117,20 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		1930F6541FEED4920045A55D /* SWRevealViewController */ = {
+			isa = PBXGroup;
+			children = (
+				1930F6571FEED4A60045A55D /* SWRevealViewController.h */,
+				1930F6561FEED4A50045A55D /* SWRevealViewController.m */,
+				1930F6551FEED4A30045A55D /* Beta Theta Pi-Bridging-Header.h */,
+			);
+			path = SWRevealViewController;
+			sourceTree = "<group>";
+		};
 		1956E0801FE5ED9500583363 = {
 			isa = PBXGroup;
 			children = (
+				1930F6541FEED4920045A55D /* SWRevealViewController */,
 				197F9EF41FE5F9C800F8F2CD /* Resources */,
 				1956E08B1FE5ED9500583363 /* Beta Theta Pi */,
 				1956E08A1FE5ED9500583363 /* Products */,
@@ -133,13 +156,16 @@
 				1956E0901FE5ED9500583363 /* Main.storyboard */,
 				1956E08E1FE5ED9500583363 /* ViewController.swift */,
 				19FD02B21FEA464D00F0C5C0 /* CreateAccount_ViewController.swift */,
-				1981F3901FECE10E00434E01 /* Announcments_Main_ViewController.swift */,
 				19DF159A1FEE2AE600533E79 /* SideMenu.storyboard */,
 				19DF15961FED24DF00533E79 /* SideMenuTableViewCell.swift */,
 				19DF15981FED279000533E79 /* SideMenuTableViewController.swift */,
 				19DF159C1FEE2BFE00533E79 /* Settings.storyboard */,
 				19DF159E1FEE398900533E79 /* SettingsTableViewCell.swift */,
 				19DF15A01FEE39A000533E79 /* SettingsTableViewController.swift */,
+				1930F64B1FEE7DAA0045A55D /* Announcements.storyboard */,
+				1981F3901FECE10E00434E01 /* Announcments_Main_ViewController.swift */,
+				1930F64D1FEE7E150045A55D /* Study Hours.storyboard */,
+				1930F64F1FEE7EBD0045A55D /* StudyHoursViewController.swift */,
 				19F670AA1FEB7B68005D44DD /* coreDataTest.xcdatamodeld */,
 				197F9F071FE6DDDC00F8F2CD /* Assets.xcassets */,
 				1956E0951FE5ED9500583363 /* LaunchScreen.storyboard */,
@@ -174,6 +200,7 @@
 		19F670B31FEBA1AF005D44DD /* touchIDIcon */ = {
 			isa = PBXGroup;
 			children = (
+				1930F6471FEE71B80045A55D /* touchID.png */,
 				19F670B81FEBA34F005D44DD /* touchIDIcon.png */,
 			);
 			path = touchIDIcon;
@@ -231,6 +258,7 @@
 				TargetAttributes = {
 					1956E0881FE5ED9500583363 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.DataProtection = {
@@ -272,11 +300,14 @@
 				19DF159D1FEE2BFE00533E79 /* Settings.storyboard in Resources */,
 				19F670B91FEBA34F005D44DD /* touchIDIcon.png in Resources */,
 				197F9F041FE6352800F8F2CD /* btp_dragon_digital in Resources */,
+				1930F6481FEE71B90045A55D /* touchID.png in Resources */,
 				197F9F061FE6352800F8F2CD /* btp_crest_digital in Resources */,
 				197F9F031FE6352800F8F2CD /* btp_shield_digital in Resources */,
 				197F9EF61FE5F9F600F8F2CD /* Gotham Bold Regular.ttf in Resources */,
 				1956E0921FE5ED9500583363 /* Main.storyboard in Resources */,
 				194C681C1FE8C772004657CC /* f_logo_online in Resources */,
+				1930F64E1FEE7E150045A55D /* Study Hours.storyboard in Resources */,
+				1930F64C1FEE7DAA0045A55D /* Announcements.storyboard in Resources */,
 				197F9F051FE6352800F8F2CD /* btp_coat_of_arms_digital in Resources */,
 				197F9F001FE6352800F8F2CD /* btp_horizontal_identity_digital in Resources */,
 				197F9F021FE6352800F8F2CD /* btp_stacked_identity_digital in Resources */,
@@ -399,7 +430,9 @@
 				19DF15A11FEE39A000533E79 /* SettingsTableViewController.swift in Sources */,
 				19FD02B31FEA464D00F0C5C0 /* CreateAccount_ViewController.swift in Sources */,
 				1956E08D1FE5ED9500583363 /* AppDelegate.swift in Sources */,
+				1930F6501FEE7EBD0045A55D /* StudyHoursViewController.swift in Sources */,
 				19DF15991FED279000533E79 /* SideMenuTableViewController.swift in Sources */,
+				1930F6581FEED4A60045A55D /* SWRevealViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -537,6 +570,7 @@
 			baseConfigurationReference = CC78CE7A047B54CE689A74BA /* Pods-Beta Theta Pi.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "Beta Theta Pi/Beta Theta Pi.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3AT7FQ5S2Z;
@@ -545,6 +579,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.James.Beta-Theta-Pi";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SWRevealViewController/Beta Theta Pi-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -555,6 +591,7 @@
 			baseConfigurationReference = AF2BF39C388DB76261373852 /* Pods-Beta Theta Pi.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "Beta Theta Pi/Beta Theta Pi.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3AT7FQ5S2Z;
@@ -563,6 +600,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.James.Beta-Theta-Pi";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SWRevealViewController/Beta Theta Pi-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
