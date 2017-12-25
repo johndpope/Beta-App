@@ -63,7 +63,7 @@ class SettingsTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "settingsTableViewCell", for: indexPath) as! SettingsTableViewCell
 
         cell.label.text = settingsArray[indexPath.section].sectionSettings[indexPath.row]
-        cell.backgroundColor = UIColor(white: 1, alpha: 0)
+        cell.backgroundColor = UIColor.blue.withAlphaComponent(0.2)
         cell.selectionStyle = UITableViewCellSelectionStyle.none
         
         return cell
@@ -74,7 +74,7 @@ class SettingsTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
-        (view as! UITableViewHeaderFooterView).backgroundView?.backgroundColor = UIColor.white.withAlphaComponent(0.4)
+        (view as! UITableViewHeaderFooterView).backgroundView?.backgroundColor = UIColor.blue.withAlphaComponent(0.4)
         (view as! UITableViewHeaderFooterView).textLabel?.textColor = UIColor.black.withAlphaComponent(0.4)
     }
     

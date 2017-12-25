@@ -13,9 +13,35 @@ class StudyHoursViewController: UIViewController {
 
     @IBOutlet weak var sideMenu: UIBarButtonItem!
     @IBOutlet weak var settings: UIBarButtonItem!
+    @IBOutlet weak var setLocationButton: UIButton!
+    @IBOutlet weak var selectClassButton: LeftAlignedIconButton!
     
     override func viewDidLoad() {
         
+        setupNavBarButtons()
+        
+        //setLocationButton.leftImage(image: UIImage(named: "location")!)
+        
+        super.viewDidLoad()
+        // Do any additional setup after loading the view.
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        AppDelegate.AppUtility.lockOrientation(.portrait)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        AppDelegate.AppUtility.lockOrientation(.all)
+    } 
+    
+    func setupNavBarButtons() {
         if self.revealViewController() != nil {
             sideMenu.target = self.revealViewController()
             sideMenu.action = #selector(SWRevealViewController.revealToggle(_:))
@@ -27,16 +53,8 @@ class StudyHoursViewController: UIViewController {
             self.revealViewController().rightViewRevealWidth = self.view.frame.width * 0.7
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
-        
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
     /*
     // MARK: - Navigation
 
@@ -46,5 +64,17 @@ class StudyHoursViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+}
 
+@IBDesignable
+class LeftAlignedIconButton: UIButton {
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        contentHorizontalAlignment = .left
+        let availableSpace = UIEdgeInsetsInsetRect(bounds, contentEdgeInsets)
+        var availableWidth = availableSpace.width - imageEdgeInsets.right - (imageView?.frame.width ?? 0) - (titleLabel?.frame.width ?? 0)
+        availableWidth -= (imageView?.frame.width)!
+        titleEdgeInsets = UIEdgeInsets(top: 0, left: availableWidth/2, bottom: 0, right: 0)
+    }
 }

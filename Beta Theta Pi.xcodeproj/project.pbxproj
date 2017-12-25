@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		1900B5781FE89E4700144D36 /* App_Icons in Resources */ = {isa = PBXBuildFile; fileRef = 1900B5771FE89E4700144D36 /* App_Icons */; };
 		1930F6481FEE71B90045A55D /* touchID.png in Resources */ = {isa = PBXBuildFile; fileRef = 1930F6471FEE71B80045A55D /* touchID.png */; };
-		1930F64C1FEE7DAA0045A55D /* Announcements.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1930F64B1FEE7DAA0045A55D /* Announcements.storyboard */; };
-		1930F64E1FEE7E150045A55D /* Study Hours.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1930F64D1FEE7E150045A55D /* Study Hours.storyboard */; };
 		1930F6501FEE7EBD0045A55D /* StudyHoursViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1930F64F1FEE7EBD0045A55D /* StudyHoursViewController.swift */; };
 		1930F6581FEED4A60045A55D /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1930F6561FEED4A50045A55D /* SWRevealViewController.m */; };
 		194249E71FE74BC20091A0C8 /* btp_digital_media_square copy in Resources */ = {isa = PBXBuildFile; fileRef = 194249E61FE74BC10091A0C8 /* btp_digital_media_square copy */; };
@@ -34,8 +32,6 @@
 		19B504D81FE8F3DD0086599B /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 19B504D71FE8F3DD0086599B /* awsconfiguration.json */; };
 		19DF15971FED24DF00533E79 /* SideMenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DF15961FED24DF00533E79 /* SideMenuTableViewCell.swift */; };
 		19DF15991FED279000533E79 /* SideMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DF15981FED279000533E79 /* SideMenuTableViewController.swift */; };
-		19DF159B1FEE2AE600533E79 /* SideMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19DF159A1FEE2AE600533E79 /* SideMenu.storyboard */; };
-		19DF159D1FEE2BFE00533E79 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19DF159C1FEE2BFE00533E79 /* Settings.storyboard */; };
 		19DF159F1FEE398900533E79 /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DF159E1FEE398900533E79 /* SettingsTableViewCell.swift */; };
 		19DF15A11FEE39A000533E79 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DF15A01FEE39A000533E79 /* SettingsTableViewController.swift */; };
 		19F670631FEB61FF005D44DD /* CropViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19F670621FEB61FF005D44DD /* CropViewController.swift */; };
@@ -50,8 +46,6 @@
 /* Begin PBXFileReference section */
 		1900B5771FE89E4700144D36 /* App_Icons */ = {isa = PBXFileReference; lastKnownFileType = folder; path = App_Icons; sourceTree = "<group>"; };
 		1930F6471FEE71B80045A55D /* touchID.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = touchID.png; path = ../../../../../Downloads/touchID.png; sourceTree = "<group>"; };
-		1930F64B1FEE7DAA0045A55D /* Announcements.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Announcements.storyboard; sourceTree = "<group>"; };
-		1930F64D1FEE7E150045A55D /* Study Hours.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Study Hours.storyboard"; sourceTree = "<group>"; };
 		1930F64F1FEE7EBD0045A55D /* StudyHoursViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyHoursViewController.swift; sourceTree = "<group>"; };
 		1930F6551FEED4A30045A55D /* Beta Theta Pi-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Beta Theta Pi-Bridging-Header.h"; sourceTree = "<group>"; };
 		1930F6561FEED4A50045A55D /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
@@ -80,8 +74,6 @@
 		19B504D71FE8F3DD0086599B /* awsconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = awsconfiguration.json; path = ../../../../Downloads/awsconfiguration.json; sourceTree = "<group>"; };
 		19DF15961FED24DF00533E79 /* SideMenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuTableViewCell.swift; sourceTree = "<group>"; };
 		19DF15981FED279000533E79 /* SideMenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuTableViewController.swift; sourceTree = "<group>"; };
-		19DF159A1FEE2AE600533E79 /* SideMenu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SideMenu.storyboard; sourceTree = "<group>"; };
-		19DF159C1FEE2BFE00533E79 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		19DF159E1FEE398900533E79 /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
 		19DF15A01FEE39A000533E79 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		19F670621FEB61FF005D44DD /* CropViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CropViewController.swift; sourceTree = "<group>"; };
@@ -156,15 +148,11 @@
 				1956E0901FE5ED9500583363 /* Main.storyboard */,
 				1956E08E1FE5ED9500583363 /* ViewController.swift */,
 				19FD02B21FEA464D00F0C5C0 /* CreateAccount_ViewController.swift */,
-				19DF159A1FEE2AE600533E79 /* SideMenu.storyboard */,
 				19DF15961FED24DF00533E79 /* SideMenuTableViewCell.swift */,
 				19DF15981FED279000533E79 /* SideMenuTableViewController.swift */,
-				19DF159C1FEE2BFE00533E79 /* Settings.storyboard */,
 				19DF159E1FEE398900533E79 /* SettingsTableViewCell.swift */,
 				19DF15A01FEE39A000533E79 /* SettingsTableViewController.swift */,
-				1930F64B1FEE7DAA0045A55D /* Announcements.storyboard */,
 				1981F3901FECE10E00434E01 /* Announcments_Main_ViewController.swift */,
-				1930F64D1FEE7E150045A55D /* Study Hours.storyboard */,
 				1930F64F1FEE7EBD0045A55D /* StudyHoursViewController.swift */,
 				19F670AA1FEB7B68005D44DD /* coreDataTest.xcdatamodeld */,
 				197F9F071FE6DDDC00F8F2CD /* Assets.xcassets */,
@@ -297,7 +285,6 @@
 				1956E0971FE5ED9500583363 /* LaunchScreen.storyboard in Resources */,
 				197F9F011FE6352800F8F2CD /* btp_wordmark_digital in Resources */,
 				1900B5781FE89E4700144D36 /* App_Icons in Resources */,
-				19DF159D1FEE2BFE00533E79 /* Settings.storyboard in Resources */,
 				19F670B91FEBA34F005D44DD /* touchIDIcon.png in Resources */,
 				197F9F041FE6352800F8F2CD /* btp_dragon_digital in Resources */,
 				1930F6481FEE71B90045A55D /* touchID.png in Resources */,
@@ -306,12 +293,9 @@
 				197F9EF61FE5F9F600F8F2CD /* Gotham Bold Regular.ttf in Resources */,
 				1956E0921FE5ED9500583363 /* Main.storyboard in Resources */,
 				194C681C1FE8C772004657CC /* f_logo_online in Resources */,
-				1930F64E1FEE7E150045A55D /* Study Hours.storyboard in Resources */,
-				1930F64C1FEE7DAA0045A55D /* Announcements.storyboard in Resources */,
 				197F9F051FE6352800F8F2CD /* btp_coat_of_arms_digital in Resources */,
 				197F9F001FE6352800F8F2CD /* btp_horizontal_identity_digital in Resources */,
 				197F9F021FE6352800F8F2CD /* btp_stacked_identity_digital in Resources */,
-				19DF159B1FEE2AE600533E79 /* SideMenu.storyboard in Resources */,
 				1981F38B1FECC28900434E01 /* Backgrounds in Resources */,
 				197F9F081FE6DDDC00F8F2CD /* Assets.xcassets in Resources */,
 				197F9EFF1FE6352800F8F2CD /* btp_digital_media_circle in Resources */,

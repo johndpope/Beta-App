@@ -100,18 +100,19 @@
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AJj-ic-O1Y">
                                                                 <rect key="frame" x="0.0" y="0.0" width="278" height="40"/>
-                                                                <color key="backgroundColor" red="0.96078431372549022" green="0.36078431372549019" blue="0.015686274509803921" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="40" id="pGU-VJ-wz1"/>
                                                                 </constraints>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                                <state key="normal" title="Sign In">
+                                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                                                <state key="normal" title="Sign In" backgroundImage="redButton">
                                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </state>
                                                                 <userDefinedRuntimeAttributes>
                                                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                                         <integer key="value" value="10"/>
                                                                     </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
+                                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                                                 </userDefinedRuntimeAttributes>
                                                                 <connections>
                                                                     <action selector="signIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ONt-yw-Wq0"/>
@@ -166,18 +167,19 @@
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gj8-NS-VCQ">
                                         <rect key="frame" x="0.0" y="656" width="374" height="40"/>
-                                        <color key="backgroundColor" red="0.96078431372549022" green="0.36078431372549019" blue="0.015686274509803921" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="8F3-xA-oHb"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <state key="normal" title="Create an Account">
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                        <state key="normal" title="Create an Account" backgroundImage="redButton">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                 <integer key="value" value="10"/>
                                             </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <segue destination="FwK-en-iou" kind="show" identifier="createAccountSegue" id="JL1-xm-WGV"/>
@@ -233,18 +235,21 @@
                                                                 <subviews>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kkb-BD-47U">
                                                                         <rect key="frame" x="0.0" y="0.0" width="90.333333333333329" height="41"/>
-                                                                        <color key="backgroundColor" red="0.96078431372549022" green="0.36078431372549019" blue="0.015686274509803921" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="41" id="0RT-m5-C1Z"/>
+                                                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="5Pf-gy-V36"/>
+                                                                            <constraint firstAttribute="width" constant="90.329999999999998" id="bqP-ie-bre"/>
                                                                         </constraints>
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                                        <state key="normal" title="Back">
+                                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                                                        <state key="normal" title="Back" backgroundImage="redButton">
                                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         </state>
                                                                         <userDefinedRuntimeAttributes>
                                                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                                                 <integer key="value" value="10"/>
                                                                             </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
+                                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                                                         </userDefinedRuntimeAttributes>
                                                                         <connections>
                                                                             <action selector="goBack:" destination="FwK-en-iou" eventType="touchUpInside" id="TpD-FG-EtV"/>
@@ -371,7 +376,7 @@
                                                         </constraints>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="25H-vB-C4G">
-                                                        <rect key="frame" x="0.0" y="383.33333333333331" width="374" height="225.99999999999994"/>
+                                                        <rect key="frame" x="0.0" y="388.66666666666669" width="374" height="210.00000000000006"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Beta Info" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EJm-mC-Leo">
                                                                 <rect key="frame" x="0.0" y="0.0" width="93" height="18"/>
@@ -380,61 +385,74 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="wv0-xM-nTS">
-                                                                <rect key="frame" x="0.0" y="26" width="374" height="200"/>
+                                                                <rect key="frame" x="0.0" y="26" width="374" height="184"/>
                                                                 <subviews>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wzf-Qk-PEJ">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="44"/>
-                                                                        <color key="backgroundColor" red="0.96078431372549022" green="0.36078431372549019" blue="0.015686274509803921" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="40"/>
                                                                         <constraints>
-                                                                            <constraint firstAttribute="height" constant="44" id="gtD-mM-9tc"/>
+                                                                            <constraint firstAttribute="height" constant="40" id="gtD-mM-9tc"/>
                                                                         </constraints>
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                                        <state key="normal" title="Select Year">
+                                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                                                        <state key="normal" title="Select Year" backgroundImage="redButton">
                                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         </state>
                                                                         <userDefinedRuntimeAttributes>
                                                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                                                 <integer key="value" value="10"/>
                                                                             </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
+                                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                                                         </userDefinedRuntimeAttributes>
                                                                     </button>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="86C-MT-gRA">
-                                                                        <rect key="frame" x="0.0" y="52" width="374" height="44"/>
-                                                                        <color key="backgroundColor" red="0.96078431372549022" green="0.36078431372549019" blue="0.015686274509803921" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                                        <state key="normal" title="Select Brother Status">
+                                                                        <rect key="frame" x="0.0" y="48" width="374" height="40"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="height" constant="40" id="NC8-Gg-22t"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                                                        <state key="normal" title="Select Brother Status" backgroundImage="redButton">
                                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         </state>
                                                                         <userDefinedRuntimeAttributes>
                                                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                                                 <integer key="value" value="10"/>
                                                                             </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
+                                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                                                         </userDefinedRuntimeAttributes>
                                                                     </button>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2gW-tg-8p9">
-                                                                        <rect key="frame" x="0.0" y="104.00000000000006" width="374" height="44"/>
-                                                                        <color key="backgroundColor" red="0.96078431372549022" green="0.36078431372549019" blue="0.015686274509803921" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                                        <state key="normal" title="Select Probation Level">
+                                                                        <rect key="frame" x="0.0" y="95.999999999999943" width="374" height="40"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="height" constant="40" id="GhM-Pk-S7R"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                                                        <state key="normal" title="Select Probation Level" backgroundImage="redButton">
                                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         </state>
                                                                         <userDefinedRuntimeAttributes>
                                                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                                                 <integer key="value" value="10"/>
                                                                             </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
+                                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                                                         </userDefinedRuntimeAttributes>
                                                                     </button>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9U1-t4-VEI">
-                                                                        <rect key="frame" x="0.0" y="156.00000000000006" width="374" height="44"/>
-                                                                        <color key="backgroundColor" red="0.96078431372549022" green="0.36078431372549019" blue="0.015686274509803921" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                                        <state key="normal" title="Select House Positions">
+                                                                        <rect key="frame" x="0.0" y="143.99999999999994" width="374" height="40"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="height" constant="40" id="tDf-xv-ONX"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                                                        <state key="normal" title="Select House Positions" backgroundImage="redButton">
                                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         </state>
                                                                         <userDefinedRuntimeAttributes>
                                                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                                                 <integer key="value" value="10"/>
                                                                             </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
+                                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                                                         </userDefinedRuntimeAttributes>
                                                                     </button>
                                                                 </subviews>
@@ -456,7 +474,7 @@
                                                         </constraints>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="XfA-3q-tyw">
-                                                        <rect key="frame" x="0.0" y="663.66666666666663" width="374" height="198"/>
+                                                        <rect key="frame" x="0.0" y="658.33333333333337" width="374" height="198"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="App Info" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eph-e5-CHM">
                                                                 <rect key="frame" x="0.0" y="0.0" width="89" height="18"/>
@@ -513,18 +531,19 @@
                                                     </stackView>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Mq-Z6-bmb">
                                                         <rect key="frame" x="100" y="916" width="174" height="44"/>
-                                                        <color key="backgroundColor" red="0.96078431372549022" green="0.36078431372549019" blue="0.015686274509803921" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="44" id="Fhd-Q2-NzN"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                        <state key="normal" title="Create Account">
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                                        <state key="normal" title="Create Account" backgroundImage="redButton">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                                 <integer key="value" value="10"/>
                                                             </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
                                                             <action selector="createAccount:" destination="FwK-en-iou" eventType="touchUpInside" id="3kE-cx-hbz"/>
@@ -638,14 +657,126 @@
             </objects>
             <point key="canvasLocation" x="2745" y="1290"/>
         </scene>
-        <!--Study Hours-->
+        <!--StudyHours-->
         <scene sceneID="lUA-Oq-efz">
             <objects>
-                <viewController title="Study Hours" id="2hU-6C-62e" customClass="StudyHoursViewController" customModule="Beta_Theta_Pi" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Study Hours" id="2hU-6C-62e" userLabel="StudyHours" customClass="StudyHoursViewController" customModule="Beta_Theta_Pi" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RzS-gP-J1K">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="6Am-PF-Hzx">
+                                <rect key="frame" x="20" y="104" width="374" height="380"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RZn-fJ-0pr" customClass="LeftAlignedIconButton" customModule="Beta_Theta_Pi" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="Mhy-ON-7j4"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                        <state key="normal" title="Your Probo Requirements" image="checkmark" backgroundImage="testButton1">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G2a-GK-LpR" customClass="LeftAlignedIconButton" customModule="Beta_Theta_Pi" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="80" width="374" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="jde-zF-SFM"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                        <state key="normal" title="Set Location" image="location" backgroundImage="redButton">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SJG-Ld-BmC" customClass="LeftAlignedIconButton" customModule="Beta_Theta_Pi" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="160" width="374" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="LiJ-x5-9cb"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                        <state key="normal" title="Select Class" image="chalkboard" backgroundImage="redButton">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ucr-JK-Jxy" customClass="LeftAlignedIconButton" customModule="Beta_Theta_Pi" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="240" width="374" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="Pfm-LU-Jdd"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                        <state key="normal" title="Start Studing" image="study" backgroundImage="redButton">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eRo-u5-a7x" customClass="LeftAlignedIconButton" customModule="Beta_Theta_Pi" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="320" width="374" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="aDL-oS-DOv"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                        <state key="normal" title="Study Log" image="timer" backgroundImage="testButton1">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="380" id="1TA-pc-UDo"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DMt-cE-eBz">
+                                <rect key="frame" x="20" y="656" width="374" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="GM2-zA-Kgl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="0.015686274510000001" green="0.50196078430000002" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="BrB-of-Q0O" firstAttribute="bottom" secondItem="DMt-cE-eBz" secondAttribute="bottom" constant="20" id="1x4-mw-gcR"/>
+                            <constraint firstItem="BrB-of-Q0O" firstAttribute="trailing" secondItem="DMt-cE-eBz" secondAttribute="trailing" constant="20" id="7q0-dg-d7d"/>
+                            <constraint firstItem="DMt-cE-eBz" firstAttribute="leading" secondItem="BrB-of-Q0O" secondAttribute="leading" constant="20" id="JWt-QC-LbE"/>
+                            <constraint firstItem="6Am-PF-Hzx" firstAttribute="leading" secondItem="BrB-of-Q0O" secondAttribute="leading" constant="20" id="XsM-22-Tak"/>
+                            <constraint firstItem="6Am-PF-Hzx" firstAttribute="top" secondItem="BrB-of-Q0O" secondAttribute="top" constant="40" id="t3j-QG-z5F"/>
+                            <constraint firstItem="BrB-of-Q0O" firstAttribute="trailing" secondItem="6Am-PF-Hzx" secondAttribute="trailing" constant="20" id="v0x-0c-9Fv"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="BrB-of-Q0O"/>
                     </view>
                     <navigationItem key="navigationItem" title="Study Hours" id="1i4-5W-gla">
@@ -653,13 +784,15 @@
                         <barButtonItem key="rightBarButtonItem" title="Item" image="settingsIcon" id="a2L-VK-pRQ"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="selectClassButton" destination="SJG-Ld-BmC" id="rgn-bE-ZNX"/>
+                        <outlet property="setLocationButton" destination="G2a-GK-LpR" id="rrs-hy-VRa"/>
                         <outlet property="settings" destination="a2L-VK-pRQ" id="LPf-lr-pji"/>
                         <outlet property="sideMenu" destination="uCJ-SV-NNw" id="a2c-BZ-uEv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="88e-Sp-BpS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3648" y="1290"/>
+            <point key="canvasLocation" x="3647.826086956522" y="1288.858695652174"/>
         </scene>
         <!--Announcements Navigation Controller-->
         <scene sceneID="b05-Rj-Ami">
@@ -793,7 +926,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="AJ2-zd-B7n">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="PDp-re-UiV">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="90"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -816,7 +949,7 @@
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="settingsTableViewCell" id="8qc-CM-bAg" customClass="SettingsTableViewCell" customModule="Beta_Theta_Pi" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="118" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8qc-CM-bAg" id="9Fw-7I-V8K">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.69999999999999996" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8qc-CM-bAg" id="9Fw-7I-V8K">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
@@ -861,13 +994,20 @@
     <resources>
         <image name="FB_Logo" width="48" height="48"/>
         <image name="betaThetaPiCrestandText" width="300" height="200"/>
+        <image name="chalkboard" width="53" height="30"/>
+        <image name="checkmark" width="53" height="30"/>
         <image name="defaultPhoto.png" width="640" height="640"/>
         <image name="hamburgerButton" width="33" height="33"/>
+        <image name="location" width="53" height="30"/>
+        <image name="redButton" width="898" height="13"/>
         <image name="settingsIcon" width="33" height="33"/>
+        <image name="study" width="53" height="30"/>
+        <image name="testButton1" width="898" height="13"/>
+        <image name="timer" width="53" height="30"/>
         <image name="touch_ID" width="62" height="62"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="2rB-QW-xOQ"/>
-        <segue reference="qca-Bp-HGB"/>
+        <segue reference="E0l-PT-Hep"/>
+        <segue reference="tzi-yG-SJb"/>
     </inferredMetricsTieBreakers>
 </document>
