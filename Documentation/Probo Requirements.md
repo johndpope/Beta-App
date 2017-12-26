@@ -89,4 +89,5 @@
 - If you don't meet with the `Wellness Committee` at least twice during the semester, you will be fined $10 for each meeting that you didn't have.
 
 - If you do not meet with someone on the scholarship committee to do grade checks after the first and second rounds of exams, you will be *effectively* moved down a probo level and you will **NOT** be allowed to go to formal until you check your grades, so just check your grades!
-
+	- 1st round grade check cutoff date - `Friday, February 23rd`
+	- 2nd round grade check cutoff date - `Friday, April 3rd`
