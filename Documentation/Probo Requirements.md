@@ -10,7 +10,7 @@
 	- Finally you are expected to **schedule and meet** with someone on the `scholarship committee` after your *first* and *second* rounds of exams. These grade checks will allow you to move up ***a single*** probo level.
 
 
-> If these requirements are not met, you will be subect to the **punishments** listed below. 
+> If these requirements are not met, you will be subect to the [**punishments**](#punishments) listed below. 
 
 ## Probo 1 (2.85 - 2.5)
 
