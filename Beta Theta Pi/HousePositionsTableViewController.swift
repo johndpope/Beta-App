@@ -28,6 +28,8 @@ class HousePositionsTableViewController: UITableViewController {
                                                "Chapter Counselor",
                                                "IFC Representative",
                                                "Technology Chair",
+                                               "Wellness Chair",
+                                               "Wellness Committee",
                                                "BMOC Chair",
                                                "BMOC Member"]),
             

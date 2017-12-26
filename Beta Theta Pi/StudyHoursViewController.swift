@@ -31,16 +31,6 @@ class StudyHoursViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        AppDelegate.AppUtility.lockOrientation(.portrait)
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        AppDelegate.AppUtility.lockOrientation(.all)
-    }
-    
     func setupNavBarButtons() {
         if self.revealViewController() != nil {
             sideMenu.target = self.revealViewController()

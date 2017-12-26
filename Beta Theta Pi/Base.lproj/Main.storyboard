@@ -1026,182 +1026,214 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="2hU-6C-62e" kind="relationship" relationship="rootViewController" id="9lE-AQ-LOl"/>
+                        <segue destination="l0n-Po-lpY" kind="relationship" relationship="rootViewController" id="gac-ME-UWD"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fxm-2y-7yC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2745" y="1290"/>
         </scene>
-        <!--StudyHours-->
-        <scene sceneID="lUA-Oq-efz">
+        <!--Study Hours-->
+        <scene sceneID="wtW-Pr-U4b">
             <objects>
-                <viewController title="Study Hours" id="2hU-6C-62e" userLabel="StudyHours" customClass="StudyHoursViewController" customModule="Beta_Theta_Pi" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="RzS-gP-J1K">
+                <viewController id="l0n-Po-lpY" customClass="StudyHoursViewController" customModule="Beta_Theta_Pi" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SzB-Ft-ozs">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="6Am-PF-Hzx">
-                                <rect key="frame" x="20" y="104" width="374" height="380"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ab0-ES-gU9">
+                                <rect key="frame" x="0.0" y="64" width="414" height="672"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RZn-fJ-0pr" customClass="LeftAlignedIconButton" customModule="Beta_Theta_Pi" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="60"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wFl-YE-ISq">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="672"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ztC-hT-Woj">
+                                                <rect key="frame" x="20" y="40" width="374" height="460"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="bOB-mz-kPX">
+                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="380"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="trT-AS-C24" customClass="LeftAlignedIconButton" customModule="Beta_Theta_Pi" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="374" height="60"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="60" id="Ug4-L0-KSP"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                                                <state key="normal" title="Probo Requirements" image="checkmark" backgroundImage="testButton1">
+                                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                        <integer key="value" value="10"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
+                                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                                </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <segue destination="nSz-PQ-bof" kind="show" id="a89-Ws-VR6"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jyL-ZL-HKo" customClass="LeftAlignedIconButton" customModule="Beta_Theta_Pi" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="80" width="374" height="60"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="60" id="6TE-Ws-mQJ"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                                                <state key="normal" title="Set Location" image="location" backgroundImage="redButton">
+                                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                        <integer key="value" value="10"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
+                                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KQG-ef-bxz" customClass="LeftAlignedIconButton" customModule="Beta_Theta_Pi" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="160" width="374" height="60"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="60" id="tA8-Xb-M1b"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                                                <state key="normal" title="Select Class" image="chalkboard" backgroundImage="redButton">
+                                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                        <integer key="value" value="10"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
+                                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gsj-WH-TTV" customClass="LeftAlignedIconButton" customModule="Beta_Theta_Pi" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="240" width="374" height="60"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="60" id="n7q-SW-6tC"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                                                <state key="normal" title="Start Studing" image="study" backgroundImage="redButton">
+                                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                        <integer key="value" value="10"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
+                                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dae-qj-8Rx" customClass="LeftAlignedIconButton" customModule="Beta_Theta_Pi" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="320" width="374" height="60"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="60" id="IGa-GM-PCo"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                                                <state key="normal" title="Study Log" image="timer" backgroundImage="testButton1">
+                                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                        <integer key="value" value="10"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
+                                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </button>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="380" id="Voj-Re-Kjh"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5kz-Qi-wII">
+                                                        <rect key="frame" x="0.0" y="400" width="374" height="60"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="60" id="A0u-ZU-Kzi"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.01626873203" green="0.50152528289999998" blue="0.95929986239999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="60" id="Mhy-ON-7j4"/>
+                                            <constraint firstItem="ztC-hT-Woj" firstAttribute="top" secondItem="wFl-YE-ISq" secondAttribute="top" constant="40" id="4FI-11-cGZ"/>
+                                            <constraint firstAttribute="trailing" secondItem="ztC-hT-Woj" secondAttribute="trailing" constant="20" id="BSK-qf-kkz"/>
+                                            <constraint firstItem="ztC-hT-Woj" firstAttribute="leading" secondItem="wFl-YE-ISq" secondAttribute="leading" constant="20" id="vyy-ss-L0t"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
-                                        <state key="normal" title="Your Probo Requirements" image="checkmark" backgroundImage="testButton1">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="10"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <segue destination="nSz-PQ-bof" kind="show" id="TYi-bg-sWq"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G2a-GK-LpR" customClass="LeftAlignedIconButton" customModule="Beta_Theta_Pi" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="80" width="374" height="60"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="60" id="jde-zF-SFM"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
-                                        <state key="normal" title="Set Location" image="location" backgroundImage="redButton">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="10"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
-                                        </userDefinedRuntimeAttributes>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SJG-Ld-BmC" customClass="LeftAlignedIconButton" customModule="Beta_Theta_Pi" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="160" width="374" height="60"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="60" id="LiJ-x5-9cb"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
-                                        <state key="normal" title="Select Class" image="chalkboard" backgroundImage="redButton">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="10"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
-                                        </userDefinedRuntimeAttributes>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ucr-JK-Jxy" customClass="LeftAlignedIconButton" customModule="Beta_Theta_Pi" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="240" width="374" height="60"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="60" id="Pfm-LU-Jdd"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
-                                        <state key="normal" title="Start Studing" image="study" backgroundImage="redButton">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="10"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
-                                        </userDefinedRuntimeAttributes>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eRo-u5-a7x" customClass="LeftAlignedIconButton" customModule="Beta_Theta_Pi" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="320" width="374" height="60"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="60" id="aDL-oS-DOv"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
-                                        <state key="normal" title="Study Log" image="timer" backgroundImage="testButton1">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="10"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
-                                        </userDefinedRuntimeAttributes>
-                                    </button>
+                                    </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="380" id="1TA-pc-UDo"/>
+                                    <constraint firstItem="wFl-YE-ISq" firstAttribute="centerX" secondItem="ab0-ES-gU9" secondAttribute="centerX" id="8aB-JZ-Orv"/>
+                                    <constraint firstItem="wFl-YE-ISq" firstAttribute="width" secondItem="ab0-ES-gU9" secondAttribute="width" id="Adt-H7-9dc"/>
+                                    <constraint firstItem="wFl-YE-ISq" firstAttribute="centerY" secondItem="ab0-ES-gU9" secondAttribute="centerY" id="Ixa-9m-8oN"/>
+                                    <constraint firstAttribute="trailing" secondItem="wFl-YE-ISq" secondAttribute="trailing" id="XGs-9E-1bS"/>
+                                    <constraint firstItem="wFl-YE-ISq" firstAttribute="height" secondItem="ab0-ES-gU9" secondAttribute="height" id="fJE-9Y-mYR"/>
+                                    <constraint firstAttribute="bottom" secondItem="wFl-YE-ISq" secondAttribute="bottom" constant="120" id="plj-oS-izf"/>
                                 </constraints>
-                            </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DMt-cE-eBz">
-                                <rect key="frame" x="20" y="656" width="374" height="60"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="GM2-zA-Kgl"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            </scrollView>
                         </subviews>
-                        <color key="backgroundColor" red="0.015686274510000001" green="0.50196078430000002" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.01626873203" green="0.50152528289999998" blue="0.95929986239999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="BrB-of-Q0O" firstAttribute="bottom" secondItem="DMt-cE-eBz" secondAttribute="bottom" constant="20" id="1x4-mw-gcR"/>
-                            <constraint firstItem="BrB-of-Q0O" firstAttribute="trailing" secondItem="DMt-cE-eBz" secondAttribute="trailing" constant="20" id="7q0-dg-d7d"/>
-                            <constraint firstItem="DMt-cE-eBz" firstAttribute="leading" secondItem="BrB-of-Q0O" secondAttribute="leading" constant="20" id="JWt-QC-LbE"/>
-                            <constraint firstItem="6Am-PF-Hzx" firstAttribute="leading" secondItem="BrB-of-Q0O" secondAttribute="leading" constant="20" id="XsM-22-Tak"/>
-                            <constraint firstItem="6Am-PF-Hzx" firstAttribute="top" secondItem="BrB-of-Q0O" secondAttribute="top" constant="40" id="t3j-QG-z5F"/>
-                            <constraint firstItem="BrB-of-Q0O" firstAttribute="trailing" secondItem="6Am-PF-Hzx" secondAttribute="trailing" constant="20" id="v0x-0c-9Fv"/>
+                            <constraint firstItem="ab0-ES-gU9" firstAttribute="top" secondItem="mD2-o9-9bA" secondAttribute="top" id="CSC-to-71g"/>
+                            <constraint firstItem="ab0-ES-gU9" firstAttribute="leading" secondItem="mD2-o9-9bA" secondAttribute="leading" id="SP6-Db-Oke"/>
+                            <constraint firstItem="mD2-o9-9bA" firstAttribute="bottom" secondItem="ab0-ES-gU9" secondAttribute="bottom" id="clB-sE-Y7V"/>
+                            <constraint firstItem="mD2-o9-9bA" firstAttribute="trailing" secondItem="ab0-ES-gU9" secondAttribute="trailing" id="j20-DF-p3M"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="BrB-of-Q0O"/>
+                        <viewLayoutGuide key="safeArea" id="mD2-o9-9bA"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Study Hours" id="1i4-5W-gla">
-                        <barButtonItem key="leftBarButtonItem" image="hamburgerButton" id="uCJ-SV-NNw"/>
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="settingsIcon" id="a2L-VK-pRQ"/>
+                    <navigationItem key="navigationItem" title="Study Hours" id="vea-u6-jkm">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="hamburgerButton" id="M2p-0R-aA5"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="settingsIcon" id="GGx-3c-y4n"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="selectClassButton" destination="SJG-Ld-BmC" id="rgn-bE-ZNX"/>
-                        <outlet property="setLocationButton" destination="G2a-GK-LpR" id="rrs-hy-VRa"/>
-                        <outlet property="settings" destination="a2L-VK-pRQ" id="LPf-lr-pji"/>
-                        <outlet property="sideMenu" destination="uCJ-SV-NNw" id="a2c-BZ-uEv"/>
+                        <outlet property="selectClassButton" destination="KQG-ef-bxz" id="ZAA-5h-3Ft"/>
+                        <outlet property="setLocationButton" destination="jyL-ZL-HKo" id="nuI-9b-fga"/>
+                        <outlet property="settings" destination="GGx-3c-y4n" id="qkx-To-sJb"/>
+                        <outlet property="sideMenu" destination="M2p-0R-aA5" id="NnH-Ji-dl9"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="88e-Sp-BpS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LAt-oK-GUt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3647.826086956522" y="1288.858695652174"/>
+            <point key="canvasLocation" x="3648" y="1290"/>
         </scene>
         <!--Requiremnets-->
         <scene sceneID="0nj-mq-JaW">
             <objects>
-                <viewController id="nSz-PQ-bof" sceneMemberID="viewController">
+                <viewController id="nSz-PQ-bof" customClass="ProboRequirementsViewController" customModule="Beta_Theta_Pi" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cRM-WC-ljO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fHj-xD-9YV">
-                                <rect key="frame" x="20" y="84" width="374" height="632"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ez4-Rb-2pu">
+                                <rect key="frame" x="0.0" y="64" width="414" height="672"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
                         </subviews>
                         <color key="backgroundColor" red="0.015686274510000001" green="0.50196078430000002" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="fHj-xD-9YV" firstAttribute="leading" secondItem="adO-3j-hLi" secondAttribute="leading" constant="20" id="FEY-bI-d6d"/>
-                            <constraint firstItem="adO-3j-hLi" firstAttribute="trailing" secondItem="fHj-xD-9YV" secondAttribute="trailing" constant="20" id="cqg-ey-ln1"/>
-                            <constraint firstItem="adO-3j-hLi" firstAttribute="bottom" secondItem="fHj-xD-9YV" secondAttribute="bottom" constant="20" id="wEN-B5-En5"/>
-                            <constraint firstItem="fHj-xD-9YV" firstAttribute="top" secondItem="adO-3j-hLi" secondAttribute="top" constant="20" id="zLU-fw-fck"/>
+                            <constraint firstItem="adO-3j-hLi" firstAttribute="trailing" secondItem="Ez4-Rb-2pu" secondAttribute="trailing" id="5yM-vA-0OG"/>
+                            <constraint firstItem="Ez4-Rb-2pu" firstAttribute="leading" secondItem="adO-3j-hLi" secondAttribute="leading" id="O5g-qd-tYN"/>
+                            <constraint firstItem="adO-3j-hLi" firstAttribute="bottom" secondItem="Ez4-Rb-2pu" secondAttribute="bottom" id="yrW-Pf-nXp"/>
+                            <constraint firstItem="Ez4-Rb-2pu" firstAttribute="top" secondItem="adO-3j-hLi" secondAttribute="top" id="zjD-5Z-w1x"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="adO-3j-hLi"/>
                     </view>
                     <navigationItem key="navigationItem" title="Requiremnets" id="Zdk-el-fhh"/>
+                    <connections>
+                        <outlet property="webKitView" destination="Ez4-Rb-2pu" id="sZn-ax-9KT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PeV-CG-PB5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4384" y="1290"/>
+            <point key="canvasLocation" x="4503" y="1289"/>
         </scene>
         <!--Announcements Navigation Controller-->
         <scene sceneID="b05-Rj-Ami">
