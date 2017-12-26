@@ -13,6 +13,8 @@ class BrotherStatusViewController: UIViewController, UIPickerViewDelegate, UIPic
 
     @IBOutlet weak var brotherStatusPicker: UIPickerView!
     
+    @IBOutlet weak var pinNumber: UITextField!
+    
     var pickerData: [String] = [String]()
     
     override func viewDidLoad() {
@@ -32,6 +34,10 @@ class BrotherStatusViewController: UIViewController, UIPickerViewDelegate, UIPic
                 else if(self.getCoreData_String("brotherStatus") == "Neophyte"){
                     self.brotherStatusPicker.selectRow(2, inComponent:0, animated:true)
                 }
+                
+                if(self.getCoreData_Int("pinNumber") != 0){
+                    self.pinNumber.text = String(self.getCoreData_Int("pinNumber"))
+                }
             }
         }
         
@@ -41,7 +47,6 @@ class BrotherStatusViewController: UIViewController, UIPickerViewDelegate, UIPic
             "Neophyte",
         ]
 
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
@@ -54,6 +59,18 @@ class BrotherStatusViewController: UIViewController, UIPickerViewDelegate, UIPic
         let context = appDelegate.persistentContainer.viewContext
         let newUser = NSEntityDescription.insertNewObject(forEntityName: "UserInfo", into: context)
         newUser.setValue(year, forKey: "brotherStatus")
+        do {
+            try context.save()
+        } catch {
+            print("Failed saving")
+        }
+    }
+    
+    func setPinNumber(_ pinNum: Int32) {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+        let newUser = NSEntityDescription.insertNewObject(forEntityName: "UserInfo", into: context)
+        newUser.setValue(pinNum, forKey: "pinNumber")
         do {
             try context.save()
         } catch {
@@ -78,6 +95,14 @@ class BrotherStatusViewController: UIViewController, UIPickerViewDelegate, UIPic
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         print(pickerData[row])
+        
+        if(pickerData[row] == "Brother"){
+            self.pinNumber.isUserInteractionEnabled = true
+        }
+        else {
+            self.pinNumber.isUserInteractionEnabled = false
+        }
+        
         setBrotherStatus(pickerData[row])
     }
     
@@ -107,5 +132,41 @@ class BrotherStatusViewController: UIViewController, UIPickerViewDelegate, UIPic
             return ""
         }
     }
-
+    
+    func getCoreData_Int(_ attribute: String) -> Int32 {
+        var intArr:[Int32] = []
+        
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "UserInfo")
+        request.returnsObjectsAsFaults = false
+        do {
+            let result = try context.fetch(request)
+            for data in result as! [NSManagedObject] {
+                if let intValue = data.value(forKey: attribute) as? Int32
+                {
+                    intArr.append(intValue)
+                }
+            }
+        } catch {
+            print("Failed")
+        }
+        let count = intArr.count
+        if(count > 0){
+            return intArr[count - 1]
+        }
+        else{
+            return 0
+        }
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        pinNumber.resignFirstResponder()  //if desired
+        return true
+    }
+    
+    @IBAction func selectBrotherStatus(_ sender: Any) {
+        setPinNumber(Int32(Int(pinNumber.text!)!))
+    }
+    
 }

@@ -19,6 +19,8 @@
 		1956E08F1FE5ED9500583363 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1956E08E1FE5ED9500583363 /* ViewController.swift */; };
 		1956E0921FE5ED9500583363 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1956E0901FE5ED9500583363 /* Main.storyboard */; };
 		1956E0971FE5ED9500583363 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1956E0951FE5ED9500583363 /* LaunchScreen.storyboard */; };
+		1975E1381FF1DCA500BFCC90 /* HousePositionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1975E1371FF1DCA500BFCC90 /* HousePositionsTableViewController.swift */; };
+		1975E13A1FF217B900BFCC90 /* HousePositionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1975E1391FF217B900BFCC90 /* HousePositionsTableViewCell.swift */; };
 		197F9EF61FE5F9F600F8F2CD /* Gotham Bold Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 197F9EF51FE5F9F600F8F2CD /* Gotham Bold Regular.ttf */; };
 		197F9EFF1FE6352800F8F2CD /* btp_digital_media_circle in Resources */ = {isa = PBXBuildFile; fileRef = 197F9EF71FE6352700F8F2CD /* btp_digital_media_circle */; };
 		197F9F001FE6352800F8F2CD /* btp_horizontal_identity_digital in Resources */ = {isa = PBXBuildFile; fileRef = 197F9EF81FE6352700F8F2CD /* btp_horizontal_identity_digital */; };
@@ -32,6 +34,7 @@
 		1981F38B1FECC28900434E01 /* Backgrounds in Resources */ = {isa = PBXBuildFile; fileRef = 1981F38A1FECC28900434E01 /* Backgrounds */; };
 		1981F3911FECE10E00434E01 /* Announcments_Main_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1981F3901FECE10E00434E01 /* Announcments_Main_ViewController.swift */; };
 		19B504D81FE8F3DD0086599B /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 19B504D71FE8F3DD0086599B /* awsconfiguration.json */; };
+		19C78C311FF15D1700AB5D0A /* ProboLevelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C78C301FF15D1700AB5D0A /* ProboLevelViewController.swift */; };
 		19DF15971FED24DF00533E79 /* SideMenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DF15961FED24DF00533E79 /* SideMenuTableViewCell.swift */; };
 		19DF15991FED279000533E79 /* SideMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DF15981FED279000533E79 /* SideMenuTableViewController.swift */; };
 		19DF159F1FEE398900533E79 /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DF159E1FEE398900533E79 /* SettingsTableViewCell.swift */; };
@@ -63,6 +66,8 @@
 		1956E0961FE5ED9500583363 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1956E0981FE5ED9500583363 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1956E09E1FE5EDD500583363 /* Beta Theta Pi.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Beta Theta Pi.entitlements"; sourceTree = "<group>"; };
+		1975E1371FF1DCA500BFCC90 /* HousePositionsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HousePositionsTableViewController.swift; sourceTree = "<group>"; };
+		1975E1391FF217B900BFCC90 /* HousePositionsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HousePositionsTableViewCell.swift; sourceTree = "<group>"; };
 		197F9EF51FE5F9F600F8F2CD /* Gotham Bold Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gotham Bold Regular.ttf"; sourceTree = "<group>"; };
 		197F9EF71FE6352700F8F2CD /* btp_digital_media_circle */ = {isa = PBXFileReference; lastKnownFileType = folder; path = btp_digital_media_circle; sourceTree = "<group>"; };
 		197F9EF81FE6352700F8F2CD /* btp_horizontal_identity_digital */ = {isa = PBXFileReference; lastKnownFileType = folder; path = btp_horizontal_identity_digital; sourceTree = "<group>"; };
@@ -76,6 +81,7 @@
 		1981F38A1FECC28900434E01 /* Backgrounds */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Backgrounds; sourceTree = "<group>"; };
 		1981F3901FECE10E00434E01 /* Announcments_Main_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Announcments_Main_ViewController.swift; sourceTree = "<group>"; };
 		19B504D71FE8F3DD0086599B /* awsconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = awsconfiguration.json; path = ../../../../Downloads/awsconfiguration.json; sourceTree = "<group>"; };
+		19C78C301FF15D1700AB5D0A /* ProboLevelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProboLevelViewController.swift; sourceTree = "<group>"; };
 		19DF15961FED24DF00533E79 /* SideMenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuTableViewCell.swift; sourceTree = "<group>"; };
 		19DF15981FED279000533E79 /* SideMenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuTableViewController.swift; sourceTree = "<group>"; };
 		19DF159E1FEE398900533E79 /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
@@ -150,6 +156,9 @@
 				1956E09E1FE5EDD500583363 /* Beta Theta Pi.entitlements */,
 				1956E08C1FE5ED9500583363 /* AppDelegate.swift */,
 				1956E0901FE5ED9500583363 /* Main.storyboard */,
+				1975E1371FF1DCA500BFCC90 /* HousePositionsTableViewController.swift */,
+				19C78C301FF15D1700AB5D0A /* ProboLevelViewController.swift */,
+				1975E1391FF217B900BFCC90 /* HousePositionsTableViewCell.swift */,
 				191350D01FF0D4FD009D59E9 /* BrotherStatusViewController.swift */,
 				191350CE1FF0C2C3009D59E9 /* YearSelectionViewController.swift */,
 				1956E08E1FE5ED9500583363 /* ViewController.swift */,
@@ -416,11 +425,14 @@
 				19DF159F1FEE398900533E79 /* SettingsTableViewCell.swift in Sources */,
 				19F670631FEB61FF005D44DD /* CropViewController.swift in Sources */,
 				1981F3911FECE10E00434E01 /* Announcments_Main_ViewController.swift in Sources */,
+				1975E1381FF1DCA500BFCC90 /* HousePositionsTableViewController.swift in Sources */,
 				19DF15971FED24DF00533E79 /* SideMenuTableViewCell.swift in Sources */,
 				19DF15A11FEE39A000533E79 /* SettingsTableViewController.swift in Sources */,
 				191350CF1FF0C2C3009D59E9 /* YearSelectionViewController.swift in Sources */,
 				19FD02B31FEA464D00F0C5C0 /* CreateAccount_ViewController.swift in Sources */,
+				1975E13A1FF217B900BFCC90 /* HousePositionsTableViewCell.swift in Sources */,
 				1956E08D1FE5ED9500583363 /* AppDelegate.swift in Sources */,
+				19C78C311FF15D1700AB5D0A /* ProboLevelViewController.swift in Sources */,
 				1930F6501FEE7EBD0045A55D /* StudyHoursViewController.swift in Sources */,
 				19DF15991FED279000533E79 /* SideMenuTableViewController.swift in Sources */,
 				1930F6581FEED4A60045A55D /* SWRevealViewController.m in Sources */,
