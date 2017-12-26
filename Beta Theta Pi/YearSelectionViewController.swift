@@ -12,6 +12,7 @@ import CoreData
 class YearSelectionViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource  {
 
     @IBOutlet weak var yearPicker: UIPickerView!
+    @IBOutlet weak var major: UITextField!
     
     var pickerData: [String] = [String]()
     
@@ -20,7 +21,6 @@ class YearSelectionViewController: UIViewController, UIPickerViewDelegate, UIPic
 
         self.yearPicker.dataSource = self
         self.yearPicker.delegate = self
-        
         
         if(getCoreData_String("year") != ""){
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
@@ -43,6 +43,10 @@ class YearSelectionViewController: UIViewController, UIPickerViewDelegate, UIPic
             
         }
         
+        if(getCoreData_String("major") != ""){
+            major.text = getCoreData_String("major")
+        }
+        
         pickerData = [
             "Freshman",
             "Sophomore",
@@ -62,6 +66,18 @@ class YearSelectionViewController: UIViewController, UIPickerViewDelegate, UIPic
         let context = appDelegate.persistentContainer.viewContext
         let newUser = NSEntityDescription.insertNewObject(forEntityName: "UserInfo", into: context)
         newUser.setValue(year, forKey: "year")
+        do {
+            try context.save()
+        } catch {
+            print("Failed saving")
+        }
+    }
+    
+    func setMajor(_ major: String) {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+        let newUser = NSEntityDescription.insertNewObject(forEntityName: "UserInfo", into: context)
+        newUser.setValue(major, forKey: "major")
         do {
             try context.save()
         } catch {
@@ -116,6 +132,9 @@ class YearSelectionViewController: UIViewController, UIPickerViewDelegate, UIPic
         }
     }
     
+    @IBAction func selectYearAndMajor(_ sender: Any) {
+        setMajor(major.text!)
+    }
     
     
 }

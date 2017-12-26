@@ -242,7 +242,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="xwg-Z0-ewf">
-                                <rect key="frame" x="20" y="273" width="374" height="210"/>
+                                <rect key="frame" x="20" y="254" width="374" height="248"/>
                                 <subviews>
                                     <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ueN-Vw-cZ0">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="162"/>
@@ -250,13 +250,22 @@
                                             <constraint firstAttribute="height" constant="162" id="Vkf-DE-tAv"/>
                                         </constraints>
                                     </pickerView>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Major" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="86p-gi-cVY">
+                                        <rect key="frame" x="0.0" y="170" width="374" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="yes" spellCheckingType="yes"/>
+                                        <connections>
+                                            <action selector="pinNumber:" destination="AYh-Dh-BhW" eventType="editingDidEnd" id="cbK-QC-g9e"/>
+                                        </connections>
+                                    </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fzb-ef-zWe">
-                                        <rect key="frame" x="0.0" y="170" width="374" height="40"/>
+                                        <rect key="frame" x="0.0" y="208" width="374" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="VBO-P1-tUr"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
-                                        <state key="normal" title="Select Year" backgroundImage="redButton">
+                                        <state key="normal" title="Save" backgroundImage="redButton">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
@@ -267,6 +276,7 @@
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
+                                            <action selector="selectYearAndMajor:" destination="PcT-gZ-utM" eventType="touchUpInside" id="WLt-sQ-P91"/>
                                             <segue destination="FwK-en-iou" kind="show" id="uM1-pc-8Mv"/>
                                         </connections>
                                     </button>
@@ -274,6 +284,7 @@
                                 <constraints>
                                     <constraint firstItem="ueN-Vw-cZ0" firstAttribute="leading" secondItem="xwg-Z0-ewf" secondAttribute="leading" id="Efa-ss-jAv"/>
                                     <constraint firstAttribute="trailing" secondItem="ueN-Vw-cZ0" secondAttribute="trailing" id="TOt-S6-sUK"/>
+                                    <constraint firstItem="86p-gi-cVY" firstAttribute="width" secondItem="xwg-Z0-ewf" secondAttribute="width" id="nIA-eP-AyL"/>
                                 </constraints>
                             </stackView>
                         </subviews>
@@ -289,6 +300,7 @@
                         <viewLayoutGuide key="safeArea" id="CMn-gI-gq8"/>
                     </view>
                     <connections>
+                        <outlet property="major" destination="86p-gi-cVY" id="3fL-xW-Z5a"/>
                         <outlet property="yearPicker" destination="ueN-Vw-cZ0" id="Xlq-XY-D0h"/>
                     </connections>
                 </viewController>
@@ -347,7 +359,7 @@
                                             <constraint firstAttribute="height" constant="40" id="Ois-Sz-yM6"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
-                                        <state key="normal" title="Select Brother Status" backgroundImage="redButton">
+                                        <state key="normal" title="Save" backgroundImage="redButton">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
@@ -432,7 +444,7 @@
                                             <constraint firstAttribute="height" constant="40" id="xgb-m2-ooK"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
-                                        <state key="normal" title="Select Probation Level" backgroundImage="redButton">
+                                        <state key="normal" title="Save" backgroundImage="redButton">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
@@ -757,7 +769,7 @@
                                                                             <constraint firstAttribute="height" constant="40" id="gtD-mM-9tc"/>
                                                                         </constraints>
                                                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
-                                                                        <state key="normal" title="Select Year" backgroundImage="redButton">
+                                                                        <state key="normal" title="Select Year/Major" backgroundImage="redButton">
                                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         </state>
                                                                         <userDefinedRuntimeAttributes>
@@ -1089,6 +1101,9 @@
                                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
                                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                                                 </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <action selector="pickPlace:" destination="l0n-Po-lpY" eventType="touchUpInside" id="3zY-YF-46o"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KQG-ef-bxz" customClass="LeftAlignedIconButton" customModule="Beta_Theta_Pi" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="160" width="374" height="60"/>
@@ -1106,6 +1121,9 @@
                                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
                                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                                                 </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <action selector="selectClass:" destination="l0n-Po-lpY" eventType="touchUpInside" id="Nhf-8H-0Gp"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gsj-WH-TTV" customClass="LeftAlignedIconButton" customModule="Beta_Theta_Pi" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="240" width="374" height="60"/>
@@ -1450,6 +1468,6 @@
     <inferredMetricsTieBreakers>
         <segue reference="E0l-PT-Hep"/>
         <segue reference="qca-Bp-HGB"/>
-        <segue reference="aDc-P2-mRj"/>
+        <segue reference="qQr-Xb-QU2"/>
     </inferredMetricsTieBreakers>
 </document>

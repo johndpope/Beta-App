@@ -28,7 +28,7 @@ class ProboLevelViewController: UIViewController, UIPickerViewDelegate, UIPicker
                 if(self.getCoreData_String("proboLevel") == "Not on Probo (GPA > 2.85)"){
                     self.proboLevelPicker.selectRow(0, inComponent:0, animated:true)
                 }
-                else if(self.getCoreData_String("proboLevel") == "Probo 1 (2.85 > GPA >= 2.5) "){
+                else if(self.getCoreData_String("proboLevel") == "Probo 1 (2.85 > GPA >= 2.5)"){
                     self.proboLevelPicker.selectRow(1, inComponent:0, animated:true)
                 }
                 else if(self.getCoreData_String("proboLevel") == "Probo 2 (2.5 > GPA >= 2.0)"){

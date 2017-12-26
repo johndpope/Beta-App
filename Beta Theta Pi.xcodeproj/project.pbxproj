@@ -16,6 +16,7 @@
 		194249E71FE74BC20091A0C8 /* btp_digital_media_square copy in Resources */ = {isa = PBXBuildFile; fileRef = 194249E61FE74BC10091A0C8 /* btp_digital_media_square copy */; };
 		194C681C1FE8C772004657CC /* f_logo_online in Resources */ = {isa = PBXBuildFile; fileRef = 194C681B1FE8C772004657CC /* f_logo_online */; };
 		194EFDF71FF2421700777D53 /* ProboRequirementsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194EFDF61FF2421700777D53 /* ProboRequirementsViewController.swift */; };
+		195518971FF29F490084B1AA /* PlacePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195518961FF29F490084B1AA /* PlacePickerViewController.swift */; };
 		1956E08D1FE5ED9500583363 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1956E08C1FE5ED9500583363 /* AppDelegate.swift */; };
 		1956E08F1FE5ED9500583363 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1956E08E1FE5ED9500583363 /* ViewController.swift */; };
 		1956E0921FE5ED9500583363 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1956E0901FE5ED9500583363 /* Main.storyboard */; };
@@ -61,6 +62,7 @@
 		194249E61FE74BC10091A0C8 /* btp_digital_media_square copy */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "btp_digital_media_square copy"; sourceTree = "<group>"; };
 		194C681B1FE8C772004657CC /* f_logo_online */ = {isa = PBXFileReference; lastKnownFileType = folder; name = f_logo_online; path = ../../../../Downloads/f_logo_online; sourceTree = "<group>"; };
 		194EFDF61FF2421700777D53 /* ProboRequirementsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProboRequirementsViewController.swift; sourceTree = "<group>"; };
+		195518961FF29F490084B1AA /* PlacePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacePickerViewController.swift; sourceTree = "<group>"; };
 		1956E0891FE5ED9500583363 /* Beta Theta Pi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Beta Theta Pi.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1956E08C1FE5ED9500583363 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1956E08E1FE5ED9500583363 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 				1956E0901FE5ED9500583363 /* Main.storyboard */,
 				194EFDF61FF2421700777D53 /* ProboRequirementsViewController.swift */,
 				1975E1371FF1DCA500BFCC90 /* HousePositionsTableViewController.swift */,
+				195518961FF29F490084B1AA /* PlacePickerViewController.swift */,
 				19C78C301FF15D1700AB5D0A /* ProboLevelViewController.swift */,
 				1975E1391FF217B900BFCC90 /* HousePositionsTableViewCell.swift */,
 				191350D01FF0D4FD009D59E9 /* BrotherStatusViewController.swift */,
@@ -407,9 +410,14 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Beta Theta Pi/Pods-Beta Theta Pi-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+				"${PODS_ROOT}/GooglePlacePicker/Frameworks/GooglePlacePicker.framework/Resources/GooglePlacePicker.bundle",
+				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -436,6 +444,7 @@
 				1975E13A1FF217B900BFCC90 /* HousePositionsTableViewCell.swift in Sources */,
 				1956E08D1FE5ED9500583363 /* AppDelegate.swift in Sources */,
 				19C78C311FF15D1700AB5D0A /* ProboLevelViewController.swift in Sources */,
+				195518971FF29F490084B1AA /* PlacePickerViewController.swift in Sources */,
 				1930F6501FEE7EBD0045A55D /* StudyHoursViewController.swift in Sources */,
 				19DF15991FED279000533E79 /* SideMenuTableViewController.swift in Sources */,
 				1930F6581FEED4A60045A55D /* SWRevealViewController.m in Sources */,

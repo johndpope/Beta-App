@@ -166,7 +166,9 @@ class BrotherStatusViewController: UIViewController, UIPickerViewDelegate, UIPic
     }
     
     @IBAction func selectBrotherStatus(_ sender: Any) {
-        setPinNumber(Int32(Int(pinNumber.text!)!))
+        if (pinNumber.text != ""){
+            setPinNumber(Int32(Int(pinNumber.text!)!))
+        }
     }
     
 }

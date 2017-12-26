@@ -11,12 +11,50 @@ import AWSMobileClient
 import AWSCognito
 import AWSCore
 import IQKeyboardManagerSwift
-import SideMenu
+import GooglePlaces
+import GoogleMaps
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    
+    
+    // Initialize stuff here
+    func application(
+        _ application: UIApplication,
+        didFinishLaunchingWithOptions launchOptions:
+        [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        
+        let credentialProvider = AWSCognitoCredentialsProvider(regionType: .USEast1, identityPoolId: "us-east-1:714cb1bf-a61f-401d-b737-47b7d984520d")
+        let configuration = AWSServiceConfiguration(region: .USEast1, credentialsProvider: credentialProvider)
+        AWSServiceManager.default().defaultServiceConfiguration = configuration
+        
+        // Initialize the Cognito Sync client
+        let syncClient = AWSCognito.default()
+        
+        // Create a record in a dataset and synchronize with the server
+        var dataset = syncClient.openOrCreateDataset("myDataset")
+        dataset.setString("myValue", forKey:"myKey")
+        dataset.synchronize().continueWith {(task: AWSTask!) -> AnyObject! in
+            // Your handler code here
+            return nil
+        }
+        
+        IQKeyboardManager.sharedManager().enable = true
+        
+        GMSPlacesClient.provideAPIKey("AIzaSyDiDa0xyWG2_rkrMQAPbc3kIM4r_CP1XDc")
+        GMSServices.provideAPIKey("AIzaSyDiDa0xyWG2_rkrMQAPbc3kIM4r_CP1XDc")
+        
+        return AWSMobileClient.sharedInstance().interceptApplication(
+            application, didFinishLaunchingWithOptions:
+            launchOptions)
+    }
+    
+    
+    
+    
+    
 
     func application(_ application: UIApplication, open url: URL,
                      sourceApplication: String?, annotation: Any) -> Bool {
@@ -45,36 +83,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             self.lockOrientation(orientation)
             UIDevice.current.setValue(rotateOrientation.rawValue, forKey: "orientation")
         }
-    }
-    
-    func application(
-        _ application: UIApplication,
-        didFinishLaunchingWithOptions launchOptions:
-        [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        
-        let credentialProvider = AWSCognitoCredentialsProvider(regionType: .USEast1, identityPoolId: "us-east-1:714cb1bf-a61f-401d-b737-47b7d984520d")
-        let configuration = AWSServiceConfiguration(region: .USEast1, credentialsProvider: credentialProvider)
-        AWSServiceManager.default().defaultServiceConfiguration = configuration
-        
-        // Initialize the Cognito Sync client
-        let syncClient = AWSCognito.default()
-        
-        // Create a record in a dataset and synchronize with the server
-        var dataset = syncClient.openOrCreateDataset("myDataset")
-        dataset.setString("myValue", forKey:"myKey")
-        dataset.synchronize().continueWith {(task: AWSTask!) -> AnyObject! in
-            // Your handler code here
-            return nil
-            
-        }
-        
-        let customSideMenuManager = SideMenuManager()
-        
-        IQKeyboardManager.sharedManager().enable = true
-        
-        return AWSMobileClient.sharedInstance().interceptApplication(
-            application, didFinishLaunchingWithOptions:
-            launchOptions)
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
