@@ -61,11 +61,10 @@ class StudyHoursViewController: UIViewController, CLLocationManagerDelegate {
             print("yeeeet")
             locationManager.startUpdatingLocation()
         }
-        
         let locValue:CLLocationCoordinate2D = locationManager.location!.coordinate
-        
         print(locValue)
         
+        /*
         let center = CLLocationCoordinate2D(latitude: locValue.latitude, longitude: locValue.longitude) 
         let northEast = CLLocationCoordinate2D(latitude: center.latitude + 0.001, longitude: center.longitude + 0.001)
         let southWest = CLLocationCoordinate2D(latitude: center.latitude - 0.001, longitude: center.longitude - 0.001)
@@ -100,7 +99,7 @@ class StudyHoursViewController: UIViewController, CLLocationManagerDelegate {
                     self.present(alert, animated: true, completion: nil)
                 }
             }
-        })
+        })*/
     }
     
     @IBAction func selectClass(_ sender: Any) {
@@ -124,16 +123,16 @@ class StudyHoursViewController: UIViewController, CLLocationManagerDelegate {
         self.present(alert, animated: true, completion: nil)
     
     }
+    
     func compareCoordinates(_ cllc2d1 : CLLocationCoordinate2D, _ cllc2d2 : CLLocationCoordinate2D) -> Bool {
         
-        var epsilon = 0.00075
+        let epsilon = 0.00075
         
         print("fabs 1: \(fabs(cllc2d1.latitude - cllc2d2.latitude))")
         print("fabs 2: \(fabs(cllc2d1.longitude - cllc2d2.longitude))")
         
         return  fabs(cllc2d1.latitude - cllc2d2.latitude) <= epsilon && fabs(cllc2d1.longitude - cllc2d2.longitude) <= epsilon
     }
-    
 }
 
 @IBDesignable
