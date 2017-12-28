@@ -7,18 +7,54 @@
 //
 
 import UIKit
-import AWSMobileClient
-import AWSCognito
-import AWSCore
+import AWSCognitoIdentityProvider
 import IQKeyboardManagerSwift
-import SideMenu
+import GooglePlaces
+import GoogleMaps
+
+let userPoolID = "UserPool"
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+    class func defaultUserPool() -> AWSCognitoIdentityUserPool {
+        return AWSCognitoIdentityUserPool(forKey: userPoolID)
+    }
+    
     var window: UIWindow?
-
-    func application(_ application: UIApplication, open url: URL,
+    
+    var loginViewController: ViewController?
+    
+    var cognitoConfig:CognitoConfig?
+    
+    var storyboard: UIStoryboard? {
+        return UIStoryboard(name: "Main", bundle: nil)
+    }
+    
+    // Initialize stuff here
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions:[UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        
+        // setup logging
+        AWSDDLog.sharedInstance.logLevel = .verbose
+        AWSDDLog.add(AWSDDTTYLogger.sharedInstance)
+        
+        // setup cognito config
+        self.cognitoConfig = CognitoConfig()
+        
+        // setup cognito
+        setupCognitoUserPool()
+        
+        // Add IQ Keyboard Manager <3
+        IQKeyboardManager.sharedManager().enable = true
+        
+        // Add Google Maps and Places Services <3
+        GMSPlacesClient.provideAPIKey("AIzaSyDiDa0xyWG2_rkrMQAPbc3kIM4r_CP1XDc")
+        GMSServices.provideAPIKey("AIzaSyDiDa0xyWG2_rkrMQAPbc3kIM4r_CP1XDc")
+        
+        return true
+    }
+    
+    /* func application(_ application: UIApplication, open url: URL,
                      sourceApplication: String?, annotation: Any) -> Bool {
         
         return AWSMobileClient.sharedInstance().interceptApplication(
@@ -26,36 +62,43 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             sourceApplication: sourceApplication,
             annotation: annotation)
         
+    } */
+    
+    func setupCognitoUserPool() {
+        // we pull the needed values from the CognitoConfig object
+        // this just pulls the values in from the plist
+        let clientId:String = self.cognitoConfig!.getClientId()
+        let poolId:String = self.cognitoConfig!.getPoolId()
+        let clientSecret:String = self.cognitoConfig!.getClientSecret()
+        let region:AWSRegionType = self.cognitoConfig!.getRegion()
+        
+        // we need to let Cognito know which region we plan to connect to
+        let serviceConfiguration:AWSServiceConfiguration = AWSServiceConfiguration(region: region, credentialsProvider: nil)
+        // we need to pass it the clientId and clientSecret from the app and the poolId for the user pool
+        let cognitoConfiguration:AWSCognitoIdentityUserPoolConfiguration = AWSCognitoIdentityUserPoolConfiguration(clientId: clientId, clientSecret: clientSecret, poolId: poolId)
+        AWSCognitoIdentityUserPool.register(with: serviceConfiguration, userPoolConfiguration: cognitoConfiguration, forKey: userPoolID)
+        let pool:AWSCognitoIdentityUserPool = AppDelegate.defaultUserPool()
+        // we need to set the AppDelegate as the user pool's delegate, which will get called when events occur
+        pool.delegate = self
     }
     
-    func application(
-        _ application: UIApplication,
-        didFinishLaunchingWithOptions launchOptions:
-        [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        
-        let credentialProvider = AWSCognitoCredentialsProvider(regionType: .USEast1, identityPoolId: "us-east-1:714cb1bf-a61f-401d-b737-47b7d984520d")
-        let configuration = AWSServiceConfiguration(region: .USEast1, credentialsProvider: credentialProvider)
-        AWSServiceManager.default().defaultServiceConfiguration = configuration
-        
-        // Initialize the Cognito Sync client
-        let syncClient = AWSCognito.default()
-        
-        // Create a record in a dataset and synchronize with the server
-        var dataset = syncClient.openOrCreateDataset("myDataset")
-        dataset.setString("myValue", forKey:"myKey")
-        dataset.synchronize().continueWith {(task: AWSTask!) -> AnyObject! in
-            // Your handler code here
-            return nil
-            
+    var orientationLock = UIInterfaceOrientationMask.all
+    
+    func application(_ application: UIApplication, supportedInterfaceOrientationsFor window: UIWindow?) -> UIInterfaceOrientationMask {
+        return self.orientationLock
+    }
+    
+    struct AppUtility {
+        static func lockOrientation(_ orientation: UIInterfaceOrientationMask) {
+            if let delegate = UIApplication.shared.delegate as? AppDelegate {
+                delegate.orientationLock = orientation
+            }
         }
         
-        let customSideMenuManager = SideMenuManager()
-        
-        IQKeyboardManager.sharedManager().enable = true
-        
-        return AWSMobileClient.sharedInstance().interceptApplication(
-            application, didFinishLaunchingWithOptions:
-            launchOptions)
+        static func lockOrientation(_ orientation: UIInterfaceOrientationMask, andRotateTo rotateOrientation:UIInterfaceOrientation) {
+            self.lockOrientation(orientation)
+            UIDevice.current.setValue(rotateOrientation.rawValue, forKey: "orientation")
+        }
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
@@ -82,6 +125,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Saves changes in the application’s managed object context before the application terminates.
         self.saveContext()
     }
+    
     // MARK: - Core Data stack
     
     lazy var persistentContainer: NSPersistentContainer = {
@@ -129,4 +173,39 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+extension AppDelegate: AWSCognitoIdentityInteractiveAuthenticationDelegate {
+    
+    func startPasswordAuthentication() -> AWSCognitoIdentityPasswordAuthentication {
+        /* if(self.navigationController == nil) {
+            self.navigationController = self.window?.rootViewController as? UINavigationController
+        } */
+        
+        if(self.loginViewController == nil) {
+            self.loginViewController = self.storyboard?.instantiateViewController(withIdentifier: "ViewController") as? ViewController
+        }
+        
+        /* DispatchQueue.main.async {
+            if(self.loginViewController!.isViewLoaded || self.loginViewController!.view.window == nil) {
+                self.navigationController?.present(self.loginViewController!, animated: true, completion: nil)
+            }
+        } */
+        
+        return self.loginViewController! as! AWSCognitoIdentityPasswordAuthentication
+    }
+    
+    /*func startNewPasswordRequired() -> AWSCognitoIdentityNewPasswordRequired {
+        if (self.resetPasswordViewController == nil) {
+            self.resetPasswordViewController = self.storyboard?.instantiateViewController(withIdentifier: "ResetPasswordController") as? ResetPasswordViewController
+        }
+        
+        DispatchQueue.main.async {
+            if(self.resetPasswordViewController!.isViewLoaded || self.resetPasswordViewController!.view.window == nil) {
+                self.navigationController?.present(self.resetPasswordViewController!, animated: true, completion: nil)
+            }
+        }
+        
+        return self.resetPasswordViewController!
+    } */
+    
+}
 

@@ -282,7 +282,6 @@ class CreateAccount_ViewController: UIViewController, UITextFieldDelegate, UIIma
         self.croppedAngle = angle
         updateImageViewWithImage(image, fromCropViewController: cropViewController)
         userImage.image = image
-        print("image updated #2")
     }
     
     public func updateImageViewWithImage(_ image: UIImage, fromCropViewController cropViewController: CropViewController) {
@@ -382,74 +381,77 @@ class CreateAccount_ViewController: UIViewController, UITextFieldDelegate, UIIma
         var passwordBool = false
         var confirmPasswordBool = false
         
+        // e25a5a - darker
+        // e25a5a - lighter
+        
         if(firstName.text == ""){
-            firstName.backgroundColor = UIColor.red
+            firstName.backgroundColor = hexStringToUIColor(hex: "e25a5a")
         } else {
             firstName.backgroundColor = UIColor.white
             firstNameBool = true
         }
         if(lastName.text == ""){
-            lastName.backgroundColor = UIColor.red
+            lastName.backgroundColor = hexStringToUIColor(hex: "e25a5a")
         } else {
             lastName.backgroundColor = UIColor.white
             lastNameBool = true
         }
         if(betaEmail.text == ""){
-            betaEmail.backgroundColor = UIColor.red
+            betaEmail.backgroundColor = hexStringToUIColor(hex: "e25a5a")
         } else {
             betaEmail.backgroundColor = UIColor.white
             betaEmailBool = true
         }
         if(phone.text == ""){
-            phone.backgroundColor = UIColor.red
+            phone.backgroundColor = hexStringToUIColor(hex: "e25a5a")
         } else {
             phone.backgroundColor = UIColor.white
             phoneBool = true
         }
         if(streetAddress.text == ""){
-            streetAddress.backgroundColor = UIColor.red
+            streetAddress.backgroundColor = hexStringToUIColor(hex: "e25a5a")
         } else {
             streetAddress.backgroundColor = UIColor.white
             streetAddressBool = true
         }
         if(city.text == ""){
-            city.backgroundColor = UIColor.red
+            city.backgroundColor = hexStringToUIColor(hex: "e25a5a")
         } else {
             city.backgroundColor = UIColor.white
             cityBool = true
         }
         if(state.text == ""){
-            state.backgroundColor = UIColor.red
+            state.backgroundColor = hexStringToUIColor(hex: "e25a5a")
         } else {
             state.backgroundColor = UIColor.white
             stateBool = true
         }
         if(zip.text == ""){
-            zip.backgroundColor = UIColor.red
+            zip.backgroundColor = hexStringToUIColor(hex: "e25a5a")
         } else {
             zip.backgroundColor = UIColor.white
             zipBool = true
         }
         if(appEmail.text == ""){
-            appEmail.backgroundColor = UIColor.red
+            appEmail.backgroundColor = hexStringToUIColor(hex: "e25a5a")
         } else {
             appEmail.backgroundColor = UIColor.white
             appEmailBool = true
         }
         if(appUsername.text == ""){
-            appUsername.backgroundColor = UIColor.red
+            appUsername.backgroundColor = hexStringToUIColor(hex: "e25a5a")
         } else {
             appUsername.backgroundColor = UIColor.white
             usernameBool = true
         }
         if(appPassword.text == ""){
-            appPassword.backgroundColor = UIColor.red
+            appPassword.backgroundColor = hexStringToUIColor(hex: "e25a5a")
         } else {
             appPassword.backgroundColor = UIColor.white
             passwordBool = true
         }
         if(appConfirmPassword.text == ""){
-            appConfirmPassword.backgroundColor = UIColor.red
+            appConfirmPassword.backgroundColor = hexStringToUIColor(hex: "e25a5a")
         } else {
             appConfirmPassword.backgroundColor = UIColor.white
             confirmPasswordBool = true
@@ -469,6 +471,28 @@ class CreateAccount_ViewController: UIViewController, UITextFieldDelegate, UIIma
             keychain.set(appPassword.text!, forKey: "password")
             performSegue(withIdentifier: "createAccountToSplitViewSegue", sender: self)
         }
+    }
+    
+    func hexStringToUIColor (hex:String) -> UIColor {
+        var cString:String = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
+        
+        if (cString.hasPrefix("#")) {
+            cString.remove(at: cString.startIndex)
+        }
+        
+        if ((cString.count) != 6) {
+            return UIColor.gray
+        }
+        
+        var rgbValue:UInt32 = 0
+        Scanner(string: cString).scanHexInt32(&rgbValue)
+        
+        return UIColor(
+            red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
+            green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0,
+            blue: CGFloat(rgbValue & 0x0000FF) / 255.0,
+            alpha: CGFloat(1.0)
+        )
     }
     
 }
