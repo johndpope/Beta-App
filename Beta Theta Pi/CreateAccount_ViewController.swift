@@ -282,7 +282,6 @@ class CreateAccount_ViewController: UIViewController, UITextFieldDelegate, UIIma
         self.croppedAngle = angle
         updateImageViewWithImage(image, fromCropViewController: cropViewController)
         userImage.image = image
-        print("image updated #2")
     }
     
     public func updateImageViewWithImage(_ image: UIImage, fromCropViewController cropViewController: CropViewController) {

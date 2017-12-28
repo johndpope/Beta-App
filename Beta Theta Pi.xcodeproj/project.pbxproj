@@ -34,10 +34,10 @@
 		197F9F041FE6352800F8F2CD /* btp_dragon_digital in Resources */ = {isa = PBXBuildFile; fileRef = 197F9EFC1FE6352800F8F2CD /* btp_dragon_digital */; };
 		197F9F051FE6352800F8F2CD /* btp_coat_of_arms_digital in Resources */ = {isa = PBXBuildFile; fileRef = 197F9EFD1FE6352800F8F2CD /* btp_coat_of_arms_digital */; };
 		197F9F061FE6352800F8F2CD /* btp_crest_digital in Resources */ = {isa = PBXBuildFile; fileRef = 197F9EFE1FE6352800F8F2CD /* btp_crest_digital */; };
-		197F9F081FE6DDDC00F8F2CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 197F9F071FE6DDDC00F8F2CD /* Assets.xcassets */; };
 		1981F38B1FECC28900434E01 /* Backgrounds in Resources */ = {isa = PBXBuildFile; fileRef = 1981F38A1FECC28900434E01 /* Backgrounds */; };
 		1981F3911FECE10E00434E01 /* Announcments_Main_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1981F3901FECE10E00434E01 /* Announcments_Main_ViewController.swift */; };
 		19B504D81FE8F3DD0086599B /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 19B504D71FE8F3DD0086599B /* awsconfiguration.json */; };
+		19B7BA101FF4339E004458E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19B7BA0F1FF4339C004458E7 /* Assets.xcassets */; };
 		19C78C311FF15D1700AB5D0A /* ProboLevelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C78C301FF15D1700AB5D0A /* ProboLevelViewController.swift */; };
 		19DF15971FED24DF00533E79 /* SideMenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DF15961FED24DF00533E79 /* SideMenuTableViewCell.swift */; };
 		19DF15991FED279000533E79 /* SideMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DF15981FED279000533E79 /* SideMenuTableViewController.swift */; };
@@ -85,10 +85,10 @@
 		197F9EFC1FE6352800F8F2CD /* btp_dragon_digital */ = {isa = PBXFileReference; lastKnownFileType = folder; path = btp_dragon_digital; sourceTree = "<group>"; };
 		197F9EFD1FE6352800F8F2CD /* btp_coat_of_arms_digital */ = {isa = PBXFileReference; lastKnownFileType = folder; path = btp_coat_of_arms_digital; sourceTree = "<group>"; };
 		197F9EFE1FE6352800F8F2CD /* btp_crest_digital */ = {isa = PBXFileReference; lastKnownFileType = folder; path = btp_crest_digital; sourceTree = "<group>"; };
-		197F9F071FE6DDDC00F8F2CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1981F38A1FECC28900434E01 /* Backgrounds */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Backgrounds; sourceTree = "<group>"; };
 		1981F3901FECE10E00434E01 /* Announcments_Main_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Announcments_Main_ViewController.swift; sourceTree = "<group>"; };
 		19B504D71FE8F3DD0086599B /* awsconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = awsconfiguration.json; path = ../../../../Downloads/awsconfiguration.json; sourceTree = "<group>"; };
+		19B7BA0F1FF4339C004458E7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../BetaMuScholarship/CognitoYourUserPoolsSample/Assets.xcassets; sourceTree = "<group>"; };
 		19C78C301FF15D1700AB5D0A /* ProboLevelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProboLevelViewController.swift; sourceTree = "<group>"; };
 		19DF15961FED24DF00533E79 /* SideMenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuTableViewCell.swift; sourceTree = "<group>"; };
 		19DF15981FED279000533E79 /* SideMenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuTableViewController.swift; sourceTree = "<group>"; };
@@ -190,7 +190,7 @@
 				1930F64F1FEE7EBD0045A55D /* StudyHoursViewController.swift */,
 				192B59DE1FF3D050001EDCF8 /* Config */,
 				19F670AA1FEB7B68005D44DD /* coreDataTest.xcdatamodeld */,
-				197F9F071FE6DDDC00F8F2CD /* Assets.xcassets */,
+				19B7BA0F1FF4339C004458E7 /* Assets.xcassets */,
 				1956E0951FE5ED9500583363 /* LaunchScreen.storyboard */,
 				1956E0981FE5ED9500583363 /* Info.plist */,
 				19F670621FEB61FF005D44DD /* CropViewController.swift */,
@@ -316,6 +316,7 @@
 			files = (
 				19B504D81FE8F3DD0086599B /* awsconfiguration.json in Resources */,
 				194249E71FE74BC20091A0C8 /* btp_digital_media_square copy in Resources */,
+				19B7BA101FF4339E004458E7 /* Assets.xcassets in Resources */,
 				19FD02B61FEA48D500F0C5C0 /* defaultPhoto.png in Resources */,
 				1956E0971FE5ED9500583363 /* LaunchScreen.storyboard in Resources */,
 				192B59E21FF3D062001EDCF8 /* CognitoConfig.plist in Resources */,
@@ -333,7 +334,6 @@
 				197F9F001FE6352800F8F2CD /* btp_horizontal_identity_digital in Resources */,
 				197F9F021FE6352800F8F2CD /* btp_stacked_identity_digital in Resources */,
 				1981F38B1FECC28900434E01 /* Backgrounds in Resources */,
-				197F9F081FE6DDDC00F8F2CD /* Assets.xcassets in Resources */,
 				197F9EFF1FE6352800F8F2CD /* btp_digital_media_circle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
