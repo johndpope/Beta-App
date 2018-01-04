@@ -91,3 +91,37 @@
 - If you do not meet with someone on the scholarship committee to do grade checks after the first and second rounds of exams, you will be *effectively* moved down a probo level and you will **NOT** be allowed to go to formal until you check your grades, so just check your grades!
 	- 1st round grade check cutoff date - `Friday, February 23rd`
 	- 2nd round grade check cutoff date - `Friday, April 3rd`
+
+## FAQs
+
+### I am on probo 2, can I still go to parties?
+
+**NO**. You are on social probation. The whole idea of social probation is to spend less time going out, and more time studying!
+
+### But what about formal?
+
+Formal is an exception. We do not want to punish you and our goal is to allow everyone to go to formal. So, we decided that as long as you are ***projected above a 2.5 GPA***, you are allowed to go to formal. This is a pretty charitable cutoff so we hope everyone is able to go to Formal!
+
+### Can I go to a party if it's at the house?
+
+Yes, but you must sober.
+
+### Can I go to a party if my gf flew in for the weekend all the way from [some location far away]?
+
+Talk to me one on one and we can probably work something out. Don't push it though as I will have no hesitation to completely take this away if people start milking it.
+
+### How many study hours do I have if I'm on probo 2 because I've been on probo 1 for more than two semesters in a row?
+
+You have all the same requirements as everyone else on probo 2.
+
+### Can I move up two probo levels?
+
+Nope. You can move up one probo level a semester and that is ***tenative*** (i.e. you can do really well and get moved up, then do poorly and get moved back down).
+
+### Can I get a son if I'm on probo 2? 
+
+Yes, as long as your grades are reasonable. Just talk to me.
+
+### What's the point of probo?
+
+Actions have consequences, so if your academic performance does not meet Beta's ***predefined standards***, you have to deal with the consequences. Now I totally get that people have bad semesters, I mean, I've been on probo before too, I get it. However, I see probo as an opportunity to grow, not only academically, but as a person. I believe that there are many parallels that can be applied to both your academics and your life. If you learn how to improve your academics using strategies such as `goal settings` and `planning`, these skills carry over to improve your personal life so you can reach personal goals. And that's really what I want you to get out of probo. Learn how to better improve yourself as a person so you can one day `"Wake up and get the money."`, as so many of you want to do!
