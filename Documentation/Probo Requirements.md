@@ -3,8 +3,10 @@
 ## Requirements for all probo levels
 
 - Submit study hours every week using the app. Late hours will ***NOT*** be tolerated!
-- You must meet with the `Wellness Committee` **twice** this semester. It is ***your perogative*** to schedule them. Contact John Brock (`brock15@purdue.edu`) to schedule your meetings. 
-	- Meetings ***must*** be at least **6 weeks apart**. You should take theses meetings seriously, a lot of brothers in this house have mental health issues, so I *truly* believe that it can be helpful to talk to the wellness committee!
+- You must meet once with the `Wellness Committee` and once with the `Academic Success Center` OR the `CCO` this semester. It is ***your perogative*** to schedule them. Contact John Brock (`brock15@purdue.edu`) and the corresponding associations to schedule your meetings. 
+	- Use the app to log these meetings. Put the organization as the name and have someone from that organization sign using the app.
+	- You should take the `Wellness` meetings seriously, a lot of brothers in this house have mental health issues, so I *truly* believe that it can be helpful to talk to the wellness committee!
+	- Make good use of the `ACS` or `CCO` visits. Don't view them as a checkmark, view them as a chance to better yourself!
 - You are expected to come to ***biweekly meetings*** after chapter each week. These meetings should only be `15-30 mins`. There will be a different topic each week (for example, goal setting will be the first topic).
 	- The first meeting will be on `January 14th` (the first chapter).
 	- Finally you are expected to **schedule and meet** with someone on the `scholarship committee` after your *first* and *second* rounds of exams. These grade checks will allow you to move up ***a single*** probo level.
@@ -33,14 +35,18 @@
 ### Requirements
 
 - 8 study hours
+  - Must go to ***at least one*** SI Session for the entire semester (i.e. attend an SI Session for a single class the entire semester).
   - Max of **4 hours** can come from **SI sessions/TA office hours**, 4 must be silent study
   - It is ***your*** responsibility to turn in these hours. The scholarship comittee will **NOT** tolerate late hours this semester. No excuses!
   
 - Use a calendar for `SI sessions` and `exams`.
   - It is ***your*** responsibilty to show your calendar to someone on the scholarship comittee by `Friday, January 19th`
 
+- You must meet once a month with the `Scholarship Chair` and the `VP of Brotherhood` to discuss your academic progress.
+  - It is ***your*** responsibilty to schedule these meetings. You must have had one meeting by the end of each month.
+
 ### Highly Recommend
-- Use a calendar for `hw` and `exams`
+- Use a calendar for `hw` and `extracirriculars`
 
 ### Grade checks
 
@@ -53,12 +59,16 @@
 ### Requirements
 
 - 12 study hours
+	- Must go to ***at least one*** SI Session for the entire semester (i.e. attend an SI Session for a single class the entire semester).
 	- Max of **6 hours** can come from **SI sessions/TA office hours**, 6 must be silent study
 	- It is ***your*** responsibility to turn in these hours. The scholarship comittee will **NOT** tolerate late hours this semester. No excuses!
 
 - Use of a calendar for `SI sessions`, `exams`, and `hw`
 	- It is highly advised to add any `extracirriculars` you are in
 	- It is ***your*** responsibilty to show your calendar to someone on the scholarship comittee by `Friday, January 19th`
+
+- You must meet once a month with the `Scholarship Chair` and the `VP of Brotherhood` to discuss your academic progress.
+  - It is ***your*** responsibilty to schedule these meetings. You must have had one meeting by the end of each month.
 
 ### Grade checks
 
@@ -72,12 +82,12 @@
 	- SI session leader
 	- TA office hours
 - There will be ***silent*** study hours at the house in the `second floor study` from `8 pm - 12 am, Mon - Fri`.
-	- Silence means you are not play your music out loud (stants). It also means yoo're not talking to your friends. Pretty simple concept!
-- This semester there will also be study hours in `RAWL`. We can't always get the same room, but it will always be somewhere on the `first floor`, from `6 pm - 12 am`. I will post the rooms for each day [here]().
+	- Silence means you are not play your music out loud (Stants). It also means yoo're not talking to your friends. Pretty simple concept!
+- This semester there we are trying to have study hours in `RAWL` or `KRAN`. We will notify you once we find a room!
 
 ## Punishments
 
-- There will be no leniency this semester, if you miss a deadline, you will be punishe!
+- There will be no leniency this semester, if you miss a deadline, you will be punished!
 
 - If you don't get your study hours in for the week, you will be fined $10.
 	- This will increase by $10 for each consecutive week.
@@ -86,7 +96,11 @@
 
 - If you miss our meetings without texting me a valid excuse **24 HOURS IN ADVANCE** you will owe me `2` extra study hours that week
 
-- If you don't meet with the `Wellness Committee` at least twice during the semester, you will be fined $10 for each meeting that you didn't have.
+- If you are on *social probation* and I find out that you went to a function, you will owe an additional `3` study hours for the rest of the semester, as well as possible chores.
+
+- If you don't meet with the `Wellness Committee` at least once during the semester, you will be fined $10.
+
+- If you don't go to the `Academic Success Center` or the `CCO` at least once during the semester, you will be fined $10.
 
 - If you do not meet with someone on the scholarship committee to do grade checks after the first and second rounds of exams, you will be *effectively* moved down a probo level and you will **NOT** be allowed to go to formal until you check your grades, so just check your grades!
 	- 1st round grade check cutoff date - `Friday, February 23rd`
@@ -94,7 +108,7 @@
 
 ## FAQs
 
-### I am on probo 2, can I still go to parties?
+### I am on probo 2/3, can I still go to parties?
 
 **NO**. You are on social probation. The whole idea of social probation is to spend less time going out, and more time studying!
 
@@ -110,7 +124,7 @@ Yes, but you must sober.
 
 Talk to me one on one and we can probably work something out. Don't push it though as I will have no hesitation to completely take this away if people start milking it.
 
-### How many study hours do I have if I'm on probo 2 because I've been on probo 1 for more than two semesters in a row?
+### How many study hours do I have if I'm on probo 2 because I've been on probo 1 for 2+ semesters in a row?
 
 You have all the same requirements as everyone else on probo 2.
 
