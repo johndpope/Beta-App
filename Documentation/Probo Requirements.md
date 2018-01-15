@@ -10,7 +10,7 @@
 - You are expected to come to ***biweekly meetings*** after chapter each week. These meetings should only be `15-30 mins`. There will be a different topic each week (for example, goal setting will be the first topic).
 	- The first meeting will be on `January 15th`.
 	- Finally you are expected to **schedule and meet** with someone on the `scholarship committee` after your *first* and *second* rounds of exams. These grade checks will allow you to move up ***a single*** probo level.
-
+- There may also be presentations that are on ***weekdays*** that you will be expected to attend. There will probably be only one or two of these a semester. We will try to notify you a month in advanced, and if you have a **valid** excuse, it must be texted to a member of the `scholarship committee` at least a ***WEEK IN ADVANCE**.
 
 > If these requirements are not met, you will be subect to the [**punishments**](#punishments) listed below. 
 
