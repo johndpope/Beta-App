@@ -94,9 +94,9 @@
 
 - If you don't get your calendar in by `January 19th`, I will add an hour to your required hours for the rest of the semester every day you're late.
 
-- If you miss our meetings without texting me a valid excuse **24 HOURS IN ADVANCE** you will owe me `2` extra study hours that week
+- If you miss our meetings without texting me a valid excuse **24 HOURS IN ADVANCE** you will owe an additional `2` study hours that week.
 
-- If you do not meet with the `Scholarship Chair` and the `VP of Brotherhood` each month, you will be an additional `2` study hours for the rest of the semester.
+- If you do not meet with the `Scholarship Chair` and the `VP of Brotherhood` each month, you will owe an additional `2` study hours for the next month.
 
 - If you are on *social probation* and I find out that you went to a function, you will owe an additional `3` study hours for the rest of the semester, as well as possible chores.
 
