@@ -8,7 +8,7 @@
 	- You should take the `Wellness` meetings seriously, a lot of brothers in this house have mental health issues, so I *truly* believe that it can be helpful to talk to the wellness committee!
 	- Make good use of the `ACS` or `CCO` visits. Don't view them as a checkmark, view them as a chance to better yourself!
 - You are expected to come to ***biweekly meetings*** after chapter each week. These meetings should only be `15-30 mins`. There will be a different topic each week (for example, goal setting will be the first topic).
-	- The first meeting will be on `January 14th` (the first chapter).
+	- The first meeting will be on `January 15th`.
 	- Finally you are expected to **schedule and meet** with someone on the `scholarship committee` after your *first* and *second* rounds of exams. These grade checks will allow you to move up ***a single*** probo level.
 
 
