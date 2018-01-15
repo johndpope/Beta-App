@@ -18,7 +18,7 @@
 
 ### Requirements 
 
-- 5 study hours
+- 5 study hours / week
   - It is ***your*** responsibility to turn in these hours. The scholarship comittee will **NOT** tolerate late hours this semester. No excuses!
 
 ### Highly Recommended
@@ -34,7 +34,7 @@
 
 ### Requirements
 
-- 8 study hours
+- 8 study hours / week
   - Must go to ***at least one*** SI Session for the entire semester (i.e. attend an SI Session for a single class the entire semester).
   - Max of **4 hours** can come from **SI sessions/TA office hours**, 4 must be silent study
   - It is ***your*** responsibility to turn in these hours. The scholarship comittee will **NOT** tolerate late hours this semester. No excuses!
@@ -51,14 +51,14 @@
 ### Grade checks
 
 - If you are projected for above a 3.2 after grade checks, you are ***tenatively*** put on probo 1
-  - 5 study hours
+  - 5 study hours / week
 
 
 ## Probo 3 (Under 2.0)
 
 ### Requirements
 
-- 12 study hours
+- 12 study hours / week
 	- Must go to ***at least one*** SI Session for the entire semester (i.e. attend an SI Session for a single class the entire semester).
 	- Max of **6 hours** can come from **SI sessions/TA office hours**, 6 must be silent study
 	- It is ***your*** responsibility to turn in these hours. The scholarship comittee will **NOT** tolerate late hours this semester. No excuses!
@@ -73,7 +73,7 @@
 ### Grade checks
 
 - If you are projected for above a 3.3 after grade checks, you are ***tenatively*** put on probo 2
-  - 8 study hours
+  - 8 study hours / week
 
 ## How to get study hours
 
